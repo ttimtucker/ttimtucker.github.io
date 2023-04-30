@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ohio/Federal MFS/MFJ Comparison</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <style>
+    .inputfield {
+      background-color:#ABBAEA;
+      background:#ABBAEA;
+    }
+    .inputfield center{
+      background-color:#ABBAEA;
+      background:#ABBAEA;
+    }
+</style>
+  <body>
+    <table  border="1";>
+      <col style="width:10%"/>
+      <col style="width:60%"/>
+      <col style="width:10%"/>
+      <col style="width:10%"/>
+      <col style="width:10%"/>
+
+      <tr>
+        <th rowspan="40"; width="40";>Federal</th>
+      </tr>
+    <tr>
+      <td class="commentfield1" style="text-align: center"></td>
+      <td class="commentfield2" style="font-weight: bold; text-align: center">Taxpayer</td>
+      <td class="commentfield3" style="font-weight: bold; text-align: center">Spouse</td>
+      <td class="commentfield4" style="font-weight: bold; text-align: center">Joint</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Year of birth</td>
+      <td class="inputfield center">
+        <input id="TaxpayerDOB" tabindex="3"
+          
+          title="Taxpayer's Date of birth"
+          size="11"
+          value="1980"
+          style='text-align:center; vertical-align:middle'>
+        </td>
+      <td class="inputfield center">
+        <input id="SpouseDOB" tabindex="3"
+          
+          title="Spouse's Date of birth"
+          size="11"
+          value="1980"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="JointDOB" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Age as of 12/31/2022</td>
+      <td id="TaxpayerAge2022" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseAge2022" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointAge2022" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">W2 Box 1 income</td>
+      <td class="inputfield center">
+        <input id="TaxpayerW2" tabindex="3"
+          title="Sum of all Taxpayer's W2"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="SpouseW2" tabindex="3"
+          title="Sum of all Spouse's W2"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="JointW2" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">W2 Box 12 Code D (401K/403B)</td>
+      <td class="inputfield center">
+        <input id="Taxpayer401K" tabindex="3"
+          title="Sum of all Taxpayer's W2 Box 12 Code D"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="Spouse401K" tabindex="3"
+          title="Sum of all Spouse's W2 Box 12 Code D"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="Joint401K" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Federally Taxable 1099-R income</td>
+      <td class="inputfield center">
+        <input id="Taxpayer1099R" tabindex="3"
+          title="Sum of all Taxpayer's 1099-R"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="Spouse1099R" tabindex="3"
+          title="Sum of all Spouse's 1099-R"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="Joint1099R" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Unemployment (1099-G) income</td>
+      <td class="inputfield center">
+        <input id="Taxpayer1099G" tabindex="3"
+          title="Sum of all Taxpayer's 1099-G"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="Spouse1099G" tabindex="3"
+          title="Sum of all Spouse's 1099-G"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="Joint1099G" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Interest (1099-INT) income</td>
+      <td class="inputfield center">
+        <input id="Taxpayer1099INT" tabindex="3"
+          title="Sum of all Taxpayer's 1099-INT"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="Spouse1099INT" tabindex="3"
+          title="Sum of all Spouse's 1099-INT"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="Joint1099INT" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Self-Employment Profit (income minus expenses)</td>
+      <td class="inputfield center">
+        <input id="TaxpayerSelfEmployment" tabindex="3"
+          title="Sum of all Taxpayer's Self-Employment profit"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="SpouseSelfEmployment" tabindex="3"
+          title="Sum of all Spouse's Self-Employment profit"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="JointSelfEmployment" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Social Security (SSA-1099) income</td>
+      <td class="inputfield center">
+        <input id="Taxpayer1099SSA" tabindex="3"
+          title="Sum of all Taxpayer's SSA-1099"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td class="inputfield center">
+        <input id="Spouse1099SSA" tabindex="3"
+          title="Sum of all Spouse's SSA-1099"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+      <td id="Joint1099SSA" class="commentfield3" style='text-align:center; vertical-align:middle'>    
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Taxable Social Security Income</td>
+      <td id="Taxpayer1099SSA_taxable" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="Spouse1099SSA_taxable" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="Joint1099SSA_taxable" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Total income (1040 line 9)</td>
+      <td id="TaxpayerTotalIncome" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseTotalIncome" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointTotalIncome" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Student Loan Interest</td>
+      <td id="TaxpayerLoanInterest" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      Not applicable</td>
+      <td id="SpouseLoanInterest" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      Not Applicable</td>
+      <td class="inputfield center">
+        <input id="JointLoanInterest" tabindex="3"
+          title="Sum of taxpayer's and spouse's student loan interest"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Deductible Student Loan Interest (Sched 1 line 21))</td>
+      <td id="TaxpayerDeductibleLoanInterest" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseDeductibleLoanInterest" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointDeductibleLoanInterest" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      </td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Deductible part of SE tax (Sched 1 line 15)</td>
+      <td id="TaxpayerDeductibleSEtax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseDeductibleSEtax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointDeductibleSEtax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Federal AGI (1040 line 11)</td>
+      <td id="TaxpayerFederalAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseFederalAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointFederalAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Retirement Savings Contribution Credit (Sched 1 line4)</td>
+      <td id="TaxpayerRSC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseRSC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointRSC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">QBI Deduction (1040 line 13)</td>
+      <td id="TaxpayerQBI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseQBI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointQBI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Standard Deduction (1040 line 12)</td>
+      <td id="TaxpayerSD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      12950</td>
+      <td id="SpouseSD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      12950</td>
+      <td id="JointSD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      25900</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Federal Taxable Income (1040 line 15)</td>
+      <td id="TaxpayerFedIncome" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseFedIncome" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointFedIncome" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Federal Tax Before Credits (1040 line 16)</td>
+      <td id="TaxpayerFedTaxPreCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseFedTaxPreCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointFedTaxPreCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Number dependents eligible for Child/Dependent Care Credit</td>
+      <td id="TaxpayerDependentCDC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+        Not applicable</td>
+      
+     <td id="SpouseDependentCDC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      Not Applicable</td>
+     
+   <td>
+      <select id="JointDependentCDC" style='text-align:center; vertical-align:middle'>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2 or more</option>
+      </select>
+    </td>
+
+    </tr>
+
+    <tr>
+      <td class="commentfield3">Child/Dependent Care Expenses</td>
+      <td id="TaxpayerCDCexpenses" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      Not applicable</td>
+      
+      <td id="SpouseCDCexpenses" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+        Not applicable</td>
+      
+      <td class="inputfield center">
+        <input id="JointCDCexpenses" tabindex="3"
+          title="Sum of all Child/Dependent Care expenses"
+          size="11"
+          value="0"
+          style='text-align:center; vertical-align:middle'
+        </td>
+
+      
+    </tr>
+    <tr>
+      <td class="commentfield3">Credit for Child/Dependent Care expenses (Sched 3 line 2)</td>
+      <td id="TaxpayerDeductibleCDCexpense" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseDeductibleCDCexpense" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointDeductibleCDCexpense" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Number dependents under 17 on 12/31 (eligible for CTC)</td>
+      <td>
+        <select id="TaxpayerDependentCTC" style='text-align:center; vertical-align:middle'>
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+     </select>
+     </td>
+     <td>
+      <select id="SpouseDependentCTC" style='text-align:center; vertical-align:middle'>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+   </select>
+   </td>
+   <td id="JointDependentCTC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+    0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Number dependents 17+ on 12/31 (eligible for COD)</td>
+      <td>
+        <select id="TaxpayerDependentCOD" style='text-align:center; vertical-align:middle'>
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+     </select>
+     </td>
+     <td>
+      <select id="SpouseDependentCOD" style='text-align:center; vertical-align:middle'>
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+   </select>
+   </td>
+   <td id="JointDependentCOD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+    0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">CTC and/or COD (1040 line 19)</td>
+      <td id="TaxpayerCTC_COD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseCTC_COD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointCTC_COD" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Total non-refundable credits (1040 line 21)</td>
+      <td id="TaxpayerNRC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseNRC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointNRC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Other Taxes including SE tax (1040 line 23)</td>
+      <td id="TaxpayerOtherTax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseOtherTax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointOtherTax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Total Tax (1040 line 24)</td>
+      <td id="TaxpayerTotalTax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseTotalTax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointTotalTax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    
+    <tr>
+      <td class="commentfield3">Number dependents eligible for EITC</td>
+      <td id="TaxpayerDependentsEITC" class="commentfield3" style='text-align:center; vertical-align:middle'>
+      0</td>
+      <td id="SpouseDependentsEITC" class="commentfield3" style='text-align:center; vertical-align:middle'>
+      0</td>
+      <td>      
+        <select id="JointDependentsEITC" style='text-align:center; vertical-align:middle'>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3 or more</option>
+      </select>
+  </td>
+    </tr>
+
+    <tr>
+      <td class="commentfield3">Earned Income Tax Credit (1040 line 27)</td>
+      <td id="TaxpayerEITC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseEITC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointEITC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Additional Child Tax Credit (1040 line 28)</td>
+      <td id="TaxpayerACTC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="SpouseACTC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+      <td id="JointACTC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+      0</td>
+    </tr>
+    <tr>
+      <td class="commentfield3">Amount owed (postive) or Refund (negative)</td>
+      <td id="TaxpayerRefund" class="commentfield3" style='text-align:center; vertical-align:middle' >      
+      0</td>
+      <td id="SpouseRefund" class="commentfield3" style='text-align:center; vertical-align:middle' >     
+      0</td>
+      <td id="JointRefund" class="commentfield3" style='text-align:center; vertical-align:middle' >      
+      0</td>
+    </tr>
+    </table>
+
+    <table  border="1";>
+      <col style="width:10%"/>
+      <col style="width:60%"/>
+      <col style="width:10%"/>
+      <col style="width:10%"/>
+      <col style="width:10%"/>
+      <tr>
+        <th rowspan="30"; width="40";>Ohio</th>
+      </tr>
+      <tr>
+        <td class="commentfield1"></td>
+        <td class="commentfield2" style="font-weight: bold; text-align: center">Taxpayer</td>
+        <td class="commentfield3" style="font-weight: bold; text-align: center">Spouse</td>
+        <td class="commentfield4" style="font-weight: bold; text-align: center">Joint</td>
+      </tr>
+
+      <tr>
+        <td class="commentfield3">FederalAGI (IT-1040 line 1)</td>
+        <td id="OH_TaxpayerFederalAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseFederalAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointFederalAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Unreimbursed Med expense subject to 7.5% AGI</td>
+        <td class="inputfield center">
+          <input id="OH_TaxpayerUME" tabindex="3"
+            title="Taxpayer's Unreimbursed Medical Expense"
+            size="11"
+            value="0"
+            style='text-align:center; vertical-align:middle'
+          </td>
+        <td class="inputfield center">
+          <input id="OH_SpouseUME" tabindex="3"
+            title="Spouse's Unreimbursed Medical Expense"
+            size="11"
+            value="0"
+            style='text-align:center; vertical-align:middle'
+          </td>
+        <td id="OH_JointUME" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+        0</td>
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Unreimbursed Med deduction (IT-1040 SOA line 36)</td>
+        <td id="OH_TaxpayerUMEdeduct" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseUMEdeduct" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointUMEdeduct" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Deductions (IT-1040 line2b)</td>
+        <td id="OH_TaxpayerDeductions" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseDeductions" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointDeductions" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH MAGI</td>
+        <td id="OH_TaxpayerMAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseMAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointMAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH AGI (IT-1040 line 3)</td>
+        <td id="OH_TaxpayerAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointAGI" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Exemption (IT-1040 line 4)</td>
+        <td id="OH_TaxpayerExemption" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseExemption" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointExemption" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Taxable Income (IT-1040 line 7)</td>
+        <td id="OH_TaxpayerTaxable" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseTaxable" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointTaxable" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Tax Before Credits(IT-1040 line 8a)</td>
+        <td id="OH_TaxpayerTaxPreCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseTaxPreCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointTaxPreCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Qualifying Income for Joint Filing Credit</td>
+        <td id="OH_TaxpayerIncomeJFC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseIncomeJFC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointIncomeJFC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Joint Filing Credit (IT-1040 SOC line 12)</td>
+        <td id="OH_TaxpayerJFC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          Not applicable</td>
+        <td id="OH_SpouseJFC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          Not applicable</td>
+        <td id="OH_JointJFC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Earned Income Credit (IT-1040 SOC line 13)</td>
+        <td id="OH_TaxpayerEIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          Not applicable</td>
+        <td id="OH_SpouseEIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          Not applicable</td>
+        <td id="OH_JointEIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Income Based Exemption Credit (IT-1040 SOC line 9)</td>
+        <td id="OH_TaxpayerExemptionCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseExemptionCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointExemptionCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Pension Income Eligible for Retirement Income Credit</td>
+        <td class="inputfield center">
+          <input id="OH_TaxpayerIncomeRIC" tabindex="3"
+            title="Taxpayer's Pension income eligible for RIC"
+            size="11"
+            value="0"
+            style='text-align:center; vertical-align:middle'
+        </td>
+        <td class="inputfield center">
+          <input id="OH_SpouseIncomeRIC" tabindex="3"
+            title="Spouse's Pension income eligible for RIC"
+            size="11"
+            value="0"
+            style='text-align:center; vertical-align:middle'
+          </td>
+        <td id="OH_JointIncomeRIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Retirement Income Credit (IT-1040 SOC line 2)</td>
+        <td id="OH_TaxpayerRIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseRIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointRIC" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Senior Citizen Credit (IT-1040 SOC line 4)</td>
+        <td id="OH_TaxpayerSeniorCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_SpouseSeniorCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_JointSeniorCredit" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td> 
+      </tr>
+      <tr>
+        <td class="commentfield3">OH Tax (IT-1040 line 21)</td>
+        <td id="OH_TaxpayerTax" class="commentfield3" style='text-align:center; vertical-align:middle' >      
+          0</td>
+        <td id="OH_SpouseTax" class="commentfield3" style='text-align:center; vertical-align:middle' >   
+          0</td>
+        <td id="OH_JointTax" class="commentfield3" style='text-align:center; vertical-align:middle' >      
+          0</td> 
+      </tr>
+    </table>
+    <br>
+    <input type="button" name="clickbtn" value="Calculate" onclick="calculate_all_values()">
+    <br>
+    <p>Summary</p>
+    <table  border="1";>
+      <col style="width:20%"/>
+      <col style="width:35%"/>
+      <col style="width:35%"/>
+      
+      <tr>
+        <td class="commentfield1"></td>
+        <td font-weight:bold; class="commentfield2" style="font-weight: bold; text-align: center">MFS</td>
+        <td class="commentfield3" style="font-weight: bold; text-align: center">MFJ</td>
+        
+      </tr>
+
+      <tr>
+        <td class="commentfield3">Ohio</td>
+        <td id="OH_MFStax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="OH_MFJtax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0
+        </td>
+      </tr>
+      <tr>
+        <td class="commentfield3">Federal</td>
+        <td id="Fed_MFStax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="Fed_MFJtax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0
+        </td>
+      </tr>
+      <tr>
+        <td class="commentfield3">Total (Federal+Ohio)</td>
+        <td id="Total_MFStax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0</td>
+        <td id="Total_MFJtax" class="commentfield3" style='text-align:center; vertical-align:middle'>      
+          0
+        </td>
+      </tr>
+      </table>
+      <br>
+      <input type="button" name="clearall" value="Clear all values" onclick="location.reload()">
+    <br>
+      <style>
+          .taxsummary {
+            background-color:#ABBAEA;
+          }
+      </style>
+      <div class="taxsummary">
+        <p id="summary" ></p>
+      </div>
+      
+    <script>
+      const MFS_STD_DEDUCTION = 12950;
+      const MFJ_STD_DEDUCTION = 25900;
+      const STD_DEDUCTION_ADDER=1400;
+
+      function calculate_all_values() {
+        populate_joint_column();
+        calculate_age_and_std_deduct();
+        populate_social_security_mfs();
+        populate_loan_interest_mfj();
+        populate_social_security_mfj();
+        //console.log("after populate_social_security_mfj",document.getElementById("Joint1099SSA_taxable").value);
+        
+        calculate_total_income();
+        calculate_deductible_se_tax();
+        calculate_federal_agi();
+        calculate_ret_savings_credit();
+        calculate_qbi();
+        calculate_federal_taxable_income();
+        calculate_fed_tax();
+        calculate_cdc_credit();
+        calculate_ctc();
+        calculate_nrc();
+        calculate_other_tax();
+        calculate_total_tax();
+        calculate_eitc();
+        calculate_refund();
+        calculate_oh_fed_agi();
+        calculate_oh_ume();
+        calculate_oh_deductions();
+        calculate_oh_magi_agi();
+        calculate_oh_exemption();
+        calculate_oh_taxable_income_and_tax();
+        calculate_oh_RIC();
+        calculate_oh_exemption_credit();
+        calculate_oh_senior_credit();
+        calculate_oh_joint_filing_credit();
+        calculate_oh_earned_income_credit();
+        calculate_oh_final_tax();
+        calculate_tax_summary();
+        //calculate_actc();
+        //calculate_ei();
+      }
+      function calculate_ret_savings_credit() {
+        Taxpayer401K=parseInt(document.getElementById("Taxpayer401K").value)
+        Spouse401K=parseInt(document.getElementById("Spouse401K").value)
+        Joint401K=Taxpayer401K+Spouse401K
+        document.getElementById("Joint401K").innerHTML=Joint401K
+
+        TaxpayerAGI=parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML);
+        SpouseAGI=parseInt(document.getElementById("SpouseFederalAGI").innerHTML);
+        JointAGI=parseInt(document.getElementById("JointFederalAGI").innerHTML);
+
+        TaxpayerDistributions=parseInt(document.getElementById("Taxpayer1099R").value);
+        SpouseDistributions=parseInt(document.getElementById("Spouse1099R").value);
+        JointDistributions=parseInt(document.getElementById("Joint1099R").innerHTML);
+
+
+        Taxpayer_Ret_Savings_credit=get_ret_savings_credit(Taxpayer401K,TaxpayerAGI,"mfs",TaxpayerDistributions)
+        document.getElementById("TaxpayerRSC").innerHTML=Taxpayer_Ret_Savings_credit
+        Spouse_Ret_Savings_credit=get_ret_savings_credit(Spouse401K,SpouseAGI,"mfs",SpouseDistributions)
+        document.getElementById("SpouseRSC").innerHTML=Spouse_Ret_Savings_credit
+        Joint_Ret_Savings_credit=get_ret_savings_credit(Joint401K,JointAGI,"mfj",JointDistributions)
+        document.getElementById("JointRSC").innerHTML=Joint_Ret_Savings_credit
+      }
+      function get_ret_savings_credit(codeD,agi,flavor,distributions) {
+        const rsc_array = [[20500,.5,.5], [22000,.5,.2], [30750,.5,.1], [33000,.5,.1], [34000,.5,.1], [41000,.5,0],
+                        [44000,.2,0], [51000,.1,0], [68000,.1,0]];
+        length_rsc_array = rsc_array.length
+        console.log("codeD",codeD,"agi",agi,"flavor",flavor,"distributions",distributions)
+        line1=0 // IRS contributions
+        line2=codeD
+        line3=line1+line2
+        console.log("rsc line3",line3)
+        line4=distributions
+        line5=Math.max(0,line3-line4)
+        console.log("rsc line5",line5)
+        line6=Math.min(2000,line5)
+        console.log("rsc line6",line6)
+        if (line6 == 0) return 0
+        for (i=0; i<length_rsc_array; i++) {
+          
+          if (agi <= rsc_array[i][0]) {
+            break
+          }
+        }
+        
+        if (i == length_rsc_array) return 0
+        if (flavor == "mfj") {
+          multiplier = rsc_array[i][1]
+        } else {
+          multiplier = rsc_array[i][2]
+        }
+        //console.log("i=",i,"mult",multiplier)
+        return Math.round(multiplier*codeD)
+      }
+      function calculate_tax_summary() {
+        OH_TaxpayerTax=parseInt(document.getElementById("OH_TaxpayerTax").innerHTML)
+        OH_SpouseTax=parseInt(document.getElementById("OH_SpouseTax").innerHTML)
+        OH_JointTax=parseInt(document.getElementById("OH_JointTax").innerHTML)
+        document.getElementById("OH_MFStax").innerHTML=OH_TaxpayerTax+OH_SpouseTax
+        document.getElementById("OH_MFJtax").innerHTML=OH_JointTax
+
+        FedTaxpayerTax=parseInt(document.getElementById("TaxpayerRefund").innerHTML)
+        FedSpouseTax=parseInt(document.getElementById("SpouseRefund").innerHTML)
+        FedJointTax=parseInt(document.getElementById("JointRefund").innerHTML)
+        //console.log(FedTaxpayerTax,FedSpouseTax,FedJointTax)
+        document.getElementById("Fed_MFStax").innerHTML=FedTaxpayerTax+FedSpouseTax
+        document.getElementById("Fed_MFJtax").innerHTML=FedJointTax
+        document.getElementById("Total_MFStax").innerHTML=FedTaxpayerTax+FedSpouseTax+OH_TaxpayerTax+OH_SpouseTax
+        document.getElementById("Total_MFJtax").innerHTML=FedJointTax+OH_JointTax
+
+        if (FedJointTax+OH_JointTax>FedTaxpayerTax+FedSpouseTax+OH_TaxpayerTax+OH_SpouseTax) {
+          document.getElementById("summary").innerHTML="Better to file MFS"
+        } else {
+          document.getElementById("summary").innerHTML="Better to file MFJ"
+        }
+      }
+      function calculate_oh_senior_credit() {
+        TaxpayerAge=parseInt(document.getElementById("TaxpayerAge2022").innerHTML)
+        SpouseAge=parseInt(document.getElementById("SpouseAge2022").innerHTML)
+        TaxpayerMAGI=parseInt(document.getElementById("OH_TaxpayerMAGI").innerHTML)
+        SpouseMAGI=parseInt(document.getElementById("OH_SpouseMAGI").innerHTML)
+        JointMAGI=parseInt(document.getElementById("OH_JointMAGI").innerHTML)
+        TaxpayerExemption=parseInt(document.getElementById("OH_TaxpayerExemption").innerHTML)
+        SpouseExemption=parseInt(document.getElementById("OH_SpouseExemption").innerHTML)
+        JointExemption=parseInt(document.getElementById("OH_JointExemption").innerHTML)
+        TaxpayerMAGIminuExemptions=TaxpayerMAGI-TaxpayerExemption
+        SpouseMAGIminuExemptions=SpouseMAGI-SpouseExemption
+        JointMAGIminuExemptions=JointMAGI-JointExemption
+        if ((TaxpayerMAGIminuExemptions < 100000) && (TaxpayerAge>= 65)) {TaxpayerSeniorCredit=50} else (TaxpayerSeniorCredit=0)
+        if (SpouseMAGIminuExemptions < 100000 && SpouseAge >= 65) {SpouseSeniorCredit=50} else (SpouseSeniorCredit=0)
+        if (JointMAGIminuExemptions < 100000 && (TaxpayerAge>= 65 || SpouseAge >= 65)) {JointSeniorCredit=50} else (JointSeniorCredit=0)
+        //console.log("seniors",TaxpayerAge,TaxpayerMAGIminuExemptions,TaxpayerSeniorCredit)
+        document.getElementById("OH_TaxpayerSeniorCredit").innerHTML=TaxpayerSeniorCredit
+        document.getElementById("OH_SpouseSeniorCredit").innerHTML=SpouseSeniorCredit
+        document.getElementById("OH_JointSeniorCredit").innerHTML=JointSeniorCredit
+
+      }
+      function calculate_age_and_std_deduct() {
+        //TaxpayerAge=figure_age(document.getElementById("TaxpayerDOB").value)
+        //SpouseAge=figure_age(document.getElementById("SpouseDOB").value)
+        TaxpayerAge=2022 - parseInt(document.getElementById("TaxpayerDOB").value)
+        SpouseAge=2022 - parseInt(document.getElementById("SpouseDOB").value)
+        document.getElementById("TaxpayerAge2022").innerHTML=TaxpayerAge
+        document.getElementById("SpouseAge2022").innerHTML=SpouseAge
+
+        TaxpayerSD=MFS_STD_DEDUCTION+(TaxpayerAge>64)*STD_DEDUCTION_ADDER
+        SpouseSD=MFS_STD_DEDUCTION+(SpouseAge>64)*STD_DEDUCTION_ADDER
+        JointSD=TaxpayerSD+SpouseSD
+        document.getElementById("TaxpayerSD").innerHTML=TaxpayerSD
+        document.getElementById("SpouseSD").innerHTML=SpouseSD
+        document.getElementById("JointSD").innerHTML=JointSD
+
+        function figure_age(date) {
+          //input=document.getElementById("TaxpayerDOB").value
+          //d=Date(date)
+          //userTimezoneOffset = d.prototype.getTimezoneOffset() * 60000;
+          //dn=new Date(d-userTimezoneOffset)
+          //console.log("dn",dn)
+          d = date;
+          let diff = d.getTimezoneOffset();
+console.log("diff",diff)
+          //Date.prototype.getFullYear(date)
+          if ( !!d.valueOf() ) {
+            //year = d.getFullYear();
+
+            
+            year=d.getFullYear();
+            console.log("year",year)
+            return 2022-year          
+          } 
+          else { 
+              return 999
+          }
+        }
+        
+      }
+      function calculate_oh_final_tax() {
+        TaxpayerTaxPreCredit=document.getElementById("OH_TaxpayerTaxPreCredit").innerHTML
+        SpouseTaxPreCredit=document.getElementById("OH_SpouseTaxPreCredit").innerHTML
+        JointTaxPreCredit=document.getElementById("OH_JointTaxPreCredit").innerHTML
+
+        TaxpayerExemptionCredit=document.getElementById("OH_TaxpayerExemptionCredit").innerHTML
+        SpouseExemptionCredit=document.getElementById("OH_SpouseExemptionCredit").innerHTML
+        JointExemptionCredit=document.getElementById("OH_JointExemptionCredit").innerHTML
+
+        JointJFC=document.getElementById("OH_JointJFC").innerHTML
+        JointEIC=document.getElementById("OH_JointEIC").innerHTML
+        //console.log("JointEIC",JointEIC)
+
+        TaxpayerRIC=document.getElementById("OH_TaxpayerRIC").innerHTML
+        SpouseRIC=document.getElementById("OH_SpouseRIC").innerHTML
+        JointRIC=document.getElementById("OH_JointRIC").innerHTML
+
+        TaxpayerSeniorCredit=document.getElementById("OH_TaxpayerSeniorCredit").innerHTML
+        SpouseSeniorCredit=document.getElementById("OH_SpouseSeniorCredit").innerHTML
+        JointSeniorCredit=document.getElementById("OH_JointSeniorCredit").innerHTML
+
+        TaxpayerFinalTax=Math.max(0,TaxpayerTaxPreCredit-TaxpayerExemptionCredit-TaxpayerRIC-TaxpayerSeniorCredit)
+        SpouseFinalTax=Math.max(0,SpouseTaxPreCredit-SpouseExemptionCredit-SpouseRIC-SpouseSeniorCredit)
+        JointFinalTax=Math.max(0,JointTaxPreCredit-JointExemptionCredit-JointRIC-JointJFC-JointSeniorCredit-JointEIC)
+
+        document.getElementById("OH_TaxpayerTax").innerHTML=TaxpayerFinalTax
+        document.getElementById("OH_SpouseTax").innerHTML=SpouseFinalTax
+        document.getElementById("OH_JointTax").innerHTML=JointFinalTax
+        
+      }
+      function calculate_oh_exemption_credit() {
+        TaxpayerMAGI=parseInt(document.getElementById("OH_TaxpayerMAGI").innerHTML)
+        SpouseMAGI=parseInt(document.getElementById("OH_SpouseMAGI").innerHTML)
+        JointMAGI=parseInt(document.getElementById("OH_JointMAGI").innerHTML)
+        TaxpayerExemption=parseInt(document.getElementById("OH_TaxpayerExemption").innerHTML)
+        SpouseExemption=parseInt(document.getElementById("OH_SpouseExemption").innerHTML)
+        JointExemption=parseInt(document.getElementById("OH_JointExemption").innerHTML)
+        TaxpayerMAGIminuExemptions=TaxpayerMAGI-TaxpayerExemption
+        SpouseMAGIminuExemptions=SpouseMAGI-SpouseExemption
+        JointMAGIminuExemptions=JointMAGI-JointExemption
+        TaxpayerDependents=parseInt(document.getElementById("TaxpayerDependentCTC").value)
+         + parseInt(document.getElementById("TaxpayerDependentCOD").value)+1;
+         
+        SpouseDependents=parseInt(document.getElementById("SpouseDependentCTC").value)
+         + parseInt(document.getElementById("SpouseDependentCOD").value)+1;
+        JointDependents=parseInt(document.getElementById("JointDependentCTC").innerHTML)
+         + parseInt(document.getElementById("JointDependentCOD").innerHTML)+2;
+        if (TaxpayerMAGIminuExemptions < 30000) { TaxpayerExemptionCredit=20*TaxpayerDependents} 
+        else TaxpayerExemptionCredit=0
+        if (SpouseMAGIminuExemptions < 30000) { SpouseExemptionCredit=20*SpouseDependents} 
+        else SpouseExemptionCredit=0
+        if (JointMAGIminuExemptions < 30000) { JointExemptionCredit=20*JointDependents} 
+        else JointExemptionCredit=0
+
+        document.getElementById("OH_TaxpayerExemptionCredit").innerHTML=TaxpayerExemptionCredit
+        document.getElementById("OH_SpouseExemptionCredit").innerHTML=SpouseExemptionCredit
+        document.getElementById("OH_JointExemptionCredit").innerHTML=JointExemptionCredit
+
+      }
+      function calculate_oh_RIC() {
+        TaxpayerIncomeRIC = parseInt(document.getElementById("OH_TaxpayerIncomeRIC").value);
+        SpouseIncomeRIC = parseInt(document.getElementById("OH_SpouseIncomeRIC").value);
+        JointIncomeRIC=TaxpayerIncomeRIC+SpouseIncomeRIC
+        document.getElementById("OH_JointIncomeRIC").innerHTML=JointIncomeRIC;
+        
+        TaxpayerMAGI=parseInt(document.getElementById("OH_TaxpayerMAGI").innerHTML)
+        SpouseMAGI=parseInt(document.getElementById("OH_SpouseMAGI").innerHTML)
+        JointMAGI=parseInt(document.getElementById("OH_JointMAGI").innerHTML)
+        TaxpayerExemption=parseInt(document.getElementById("OH_TaxpayerExemption").innerHTML)
+        SpouseExemption=parseInt(document.getElementById("OH_SpouseExemption").innerHTML)
+        JointExemption=parseInt(document.getElementById("OH_JointExemption").innerHTML)
+        TaxpayerMAGIminuExemptions=TaxpayerMAGI-TaxpayerExemption
+        SpouseMAGIminuExemptions=SpouseMAGI-SpouseExemption
+        JointMAGIminuExemptions=JointMAGI-JointExemption
+
+        if (TaxpayerMAGIminuExemptions < 100000) { TaxpayerRIC=figure_oh_RIC(TaxpayerIncomeRIC) }
+        else TaxpayerRIC=0
+        if (SpouseMAGIminuExemptions < 100000) { SpouseRIC=figure_oh_RIC(SpouseIncomeRIC) }
+        else SpouseRIC=0
+        if (JointMAGIminuExemptions < 100000) { JointRIC=figure_oh_RIC(JointIncomeRIC) }
+        else JointRIC=0
+        
+        document.getElementById("OH_TaxpayerRIC").innerHTML=TaxpayerRIC
+        document.getElementById("OH_SpouseRIC").innerHTML=SpouseRIC
+        document.getElementById("OH_JointRIC").innerHTML=JointRIC
+        function figure_oh_RIC(income) {
+          if (income <=500) return 0
+          else if (income <= 1500) return 25
+          else if (income < 3000) return 50
+          else if (income <= 5000) return 80
+          else if (income <= 8000) return 130
+          else return 200
+        }
+      }
+      function calculate_oh_earned_income_credit() {
+        JointEIC=parseInt(document.getElementById("JointEITC").innerHTML);
+        console.log("JointEIC",JointEIC)
+        document.getElementById("OH_JointEIC").innerHTML=Math.round(0.3*JointEIC)
+      }
+      function calculate_oh_joint_filing_credit() {
+        TaxpayerW2 = parseInt(document.getElementById("TaxpayerW2").value);
+        TaxpayerUnemployment=parseInt(document.getElementById("Taxpayer1099G").value);
+        Taxpayer1099R=parseInt(document.getElementById("Taxpayer1099R").value);
+        Taxpayer1099R_RIC=parseInt(document.getElementById("OH_TaxpayerRIC").innerHTML);
+        TaxpayerQualIncome=TaxpayerW2+TaxpayerUnemployment+Taxpayer1099R-Taxpayer1099R_RIC
+        TaxpayerSeniorCredit=parseInt(document.getElementById("OH_TaxpayerSeniorCredit").innerHTML);
+        TaxpayerIncomeCredit=parseInt(document.getElementById("OH_TaxpayerExemptionCredit").innerHTML)
+        //console.log(TaxpayerW2,TaxpayerUnemployment,Taxpayer1099R,Taxpayer1099R_RIC,TaxpayerQualIncome)
+        
+
+        SpouseW2 = parseInt(document.getElementById("SpouseW2").value);
+        SpouseUnemployment=parseInt(document.getElementById("Spouse1099G").value);
+        Spouse1099R=parseInt(document.getElementById("Spouse1099R").value);
+        Spouse1099R_RIC=parseInt(document.getElementById("OH_SpouseRIC").innerHTML);
+        SpouseQualifyingIncome=SpouseW2+SpouseUnemployment+Spouse1099R-Spouse1099R_RIC
+        SpouseSeniorCredit=parseInt(document.getElementById("OH_SpouseSeniorCredit").innerHTML);
+        SpouseIncomeCredit=parseInt(document.getElementById("OH_SpouseExemptionCredit").innerHTML)
+
+        JointTaxPreCredits=parseInt(document.getElementById("OH_JointTaxPreCredit").innerHTML);
+        JointMAGI=parseInt(document.getElementById("OH_JointMAGI").innerHTML);
+        JointExemptions=parseInt(document.getElementById("OH_JointExemption").innerHTML);
+        JointMAGIlessExemptions=JointMAGI-JointExemptions
+        Joint1099R_RIC=parseInt(document.getElementById("OH_JointRIC").innerHTML);
+        JointSeniorCredit=parseInt(document.getElementById("OH_JointSeniorCredit").innerHTML);
+        JointIncomeCredit=parseInt(document.getElementById("OH_JointExemptionCredit").innerHTML)
+        JointTaxUsedToCalculateJFC=JointTaxPreCredits-Joint1099R_RIC-JointSeniorCredit-JointIncomeCredit
+        credit=0
+        //console.log("TaxpayerQualIncome",TaxpayerQualIncome)
+        if ((TaxpayerQualIncome>=500) && (SpouseQualifyingIncome>=500)) {
+          if (JointMAGIlessExemptions < 25000) {credit = 0.2*JointTaxUsedToCalculateJFC}
+          else if (JointMAGIlessExemptions < 50000) {credit = 0.15*JointTaxUsedToCalculateJFC}
+          else if (JointMAGIlessExemptions < 75000) {credit = 0.10*JointTaxUsedToCalculateJFC}
+          else credit = 0.05*JointTaxUsedToCalculateJFC
+        }
+        document.getElementById("OH_JointJFC").innerHTML=Math.round(credit)
+
+
+      }
+      function calculate_oh_taxable_income_and_tax() {
+        TaxpayerAGI=parseInt(document.getElementById("OH_TaxpayerAGI").innerHTML);
+        SpouseAGI=parseInt(document.getElementById("OH_SpouseAGI").innerHTML);
+        JointAGI=parseInt(document.getElementById("OH_JointAGI").innerHTML);
+        TaxpayerExemption=parseInt(document.getElementById("OH_TaxpayerExemption").innerHTML)
+        SpouseExemption=parseInt(document.getElementById("OH_SpouseExemption").innerHTML)
+        JointExemption=parseInt(document.getElementById("OH_JointExemption").innerHTML)
+        TaxpayerOhioTaxable=TaxpayerAGI-TaxpayerExemption
+        SpouseOhioTaxable=SpouseAGI-SpouseExemption
+        JointOhioTaxable=JointAGI-JointExemption
+        document.getElementById("OH_TaxpayerTaxable").innerHTML=Math.max(0,TaxpayerOhioTaxable)
+        document.getElementById("OH_SpouseTaxable").innerHTML=Math.max(0,SpouseOhioTaxable)
+        document.getElementById("OH_JointTaxable").innerHTML=Math.max(0,JointOhioTaxable)
+        //console.log("TaxpayerOhioTaxable",TaxpayerOhioTaxable)
+        TaxpayerTax=figure_oh_tax(TaxpayerOhioTaxable)
+        //console.log("TaxpayerTax",Math.round(TaxpayerTax))
+        SpouseTax=figure_oh_tax(SpouseOhioTaxable)
+        JointTax=figure_oh_tax(JointOhioTaxable)
+        document.getElementById("OH_TaxpayerTaxPreCredit").innerHTML=Math.round(TaxpayerTax)
+        document.getElementById("OH_SpouseTaxPreCredit").innerHTML=Math.round(SpouseTax)
+        document.getElementById("OH_JointTaxPreCredit").innerHTML=Math.round(JointTax)
+        function figure_oh_tax(income) {
+          //console.log("income",income)
+          if (income <= 26050) { return 0 }
+          else if (income <= 46100) {return (360.69 + 0.02765*(income-26050))}
+          else if (income <= 92150) {return (915.07 + 0.03226*(income-46100))}
+          else if (income <= 115300) {return (2400.64 + 0.03688*(income-92150))}
+          else {return (3254.41 + 0.03990*(income-115300))}
+        }
+
+      }
+      function calculate_oh_exemption() {
+        TaxpayerMAGI=parseInt(document.getElementById("OH_TaxpayerMAGI").innerHTML);
+        SpouseMAGI=parseInt(document.getElementById("OH_SpouseMAGI").innerHTML);
+        JointMAGI=parseInt(document.getElementById("OH_JointMAGI").innerHTML);
+        TaxpayerDependents=parseInt(document.getElementById("TaxpayerDependentCTC").value)
+         + parseInt(document.getElementById("TaxpayerDependentCOD").value);
+         
+        SpouseDependents=parseInt(document.getElementById("SpouseDependentCTC").value)
+         + parseInt(document.getElementById("SpouseDependentCOD").value);
+        JointDependents=parseInt(document.getElementById("JointDependentCTC").innerHTML)
+         + parseInt(document.getElementById("JointDependentCOD").innerHTML);
+         
+        TaxpayerExemption=figure_exemption(TaxpayerMAGI,TaxpayerDependents,"mfs")
+        SpouseExemption=figure_exemption(SpouseMAGI,SpouseDependents,"mfs")
+        JointExemption=figure_exemption(JointMAGI,JointDependents,"mfj")
+        document.getElementById("OH_TaxpayerExemption").innerHTML=TaxpayerExemption
+        document.getElementById("OH_SpouseExemption").innerHTML=SpouseExemption
+        document.getElementById("OH_JointExemption").innerHTML=JointExemption
+        function figure_exemption(agi,dependents,flavor) {
+          //console.log(agi)
+          if (flavor == "mfs") {adder=1} else {adder=2}
+          if (agi <= 40000) {return 2400*(dependents+adder)}
+          else if (agi <= 80000) {return 2150*(dependents+adder)}
+          else {return 1900*(dependents+adder)}
+        }
+      }
+      function calculate_oh_magi_agi() {
+        TaxpayerFedAGI=parseInt(document.getElementById("OH_TaxpayerFederalAGI").innerHTML);
+        SpouseFedAGI=parseInt(document.getElementById("OH_SpouseFederalAGI").innerHTML);
+        JointFedAGI=parseInt(document.getElementById("OH_JointFederalAGI").innerHTML);
+        TaxpayerUMEdeduct=parseInt(document.getElementById("OH_TaxpayerUMEdeduct").innerHTML)
+        SpouseUMEdeduct=parseInt(document.getElementById("OH_SpouseUMEdeduct").innerHTML)
+        JointUMEdeduct=parseInt(document.getElementById("OH_JointUMEdeduct").innerHTML)
+        TaxpayerSSA=parseInt(document.getElementById("Taxpayer1099SSA_taxable").innerHTML)
+        SpouseSSA=parseInt(document.getElementById("Spouse1099SSA_taxable").innerHTML)
+        JointSSA=parseInt(document.getElementById("Joint1099SSA_taxable").innerHTML)
+        TaxpayerSE=parseInt(document.getElementById("TaxpayerSelfEmployment").value)
+        SpouseSE=parseInt(document.getElementById("SpouseSelfEmployment").value)
+        JointSE=parseInt(document.getElementById("JointSelfEmployment").innerHTML)
+        TaxpayerMAGI=Math.max(0,TaxpayerFedAGI-TaxpayerUMEdeduct-TaxpayerSSA)
+        SpouseMAGI=Math.max(SpouseFedAGI-SpouseUMEdeduct-SpouseSSA)
+        JointMAGI=Math.max(JointFedAGI-JointUMEdeduct-JointSSA)
+        TaxpayerAGI=Math.max(TaxpayerFedAGI-TaxpayerUMEdeduct-TaxpayerSSA-TaxpayerSE)
+        SpouseAGI=Math.max(SpouseFedAGI-SpouseUMEdeduct-SpouseSSA-SpouseSE)
+        JointAGI=Math.max(JointFedAGI-JointUMEdeduct-JointSSA-JointSE)
+        document.getElementById("OH_TaxpayerMAGI").innerHTML=TaxpayerMAGI
+        document.getElementById("OH_SpouseMAGI").innerHTML=SpouseMAGI
+        document.getElementById("OH_JointMAGI").innerHTML=JointMAGI
+        document.getElementById("OH_TaxpayerAGI").innerHTML=TaxpayerAGI
+        document.getElementById("OH_SpouseAGI").innerHTML=SpouseAGI
+        document.getElementById("OH_JointAGI").innerHTML=JointAGI
+      }
+      function calculate_oh_deductions() {
+        TaxpayerUMEdeduct=parseInt(document.getElementById("OH_TaxpayerUMEdeduct").innerHTML);
+        SpouseUMEdeduct=parseInt(document.getElementById("OH_SpouseUMEdeduct").innerHTML);
+        JointUMEdeduct=parseInt(document.getElementById("OH_JointUMEdeduct").innerHTML);
+        TaxpayerSelfEmployment=parseInt(document.getElementById("TaxpayerSelfEmployment").value);
+
+        SpouseSelfEmployment=parseInt(document.getElementById("SpouseSelfEmployment").value);
+        JointSelfEmployment=parseInt(document.getElementById("JointSelfEmployment").innerHTML);
+        
+        TaxPayerDeductions=TaxpayerUMEdeduct+TaxpayerSelfEmployment
+        SpouseDeductions=SpouseUMEdeduct+SpouseSelfEmployment
+        JointDeductions=JointUMEdeduct+JointSelfEmployment
+        document.getElementById("OH_TaxpayerDeductions").innerHTML=TaxPayerDeductions
+        document.getElementById("OH_SpouseDeductions").innerHTML=SpouseDeductions
+        document.getElementById("OH_JointDeductions").innerHTML=JointDeductions
+      }
+      function calculate_oh_ume() {
+        
+        TaxpayerUME=parseInt(document.getElementById("OH_TaxpayerUME").value);
+        
+        SpouseUME=parseInt(document.getElementById("OH_SpouseUME").value);
+        
+        JointUME=TaxpayerUME+SpouseUME
+        //console.log(JointUME)
+        document.getElementById("OH_JointUME").innerHTML=JointUME
+        TaxpayerAGI=parseInt(document.getElementById("OH_TaxpayerFederalAGI").innerHTML);
+        SpouseAGI=parseInt(document.getElementById("OH_SpouseFederalAGI").innerHTML);
+        JointAGI=parseInt(document.getElementById("OH_JointFederalAGI").innerHTML);
+        //console.log(TaxpayerUME-0.075*TaxpayerAGI)
+        document.getElementById("OH_TaxpayerUMEdeduct").innerHTML=Math.round(Math.max(0,TaxpayerUME-0.075*TaxpayerAGI));
+        document.getElementById("OH_SpouseUMEdeduct").innerHTML=Math.round(Math.max(0,SpouseUME-0.075*SpouseAGI));
+        document.getElementById("OH_JointUMEdeduct").innerHTML=Math.round(Math.max(0,JointUME-0.075*JointAGI));
+      }
+      function calculate_oh_fed_agi() {
+        TaxpayerAGI=parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML);
+        
+        SpouseAGI=parseInt(document.getElementById("SpouseFederalAGI").innerHTML);
+        JointAGI=parseInt(document.getElementById("JointFederalAGI").innerHTML);
+        document.getElementById("OH_TaxpayerFederalAGI").innerHTML=TaxpayerAGI
+        document.getElementById("OH_SpouseFederalAGI").innerHTML=SpouseAGI
+        document.getElementById("OH_JointFederalAGI").innerHTML=JointAGI
+      }
+      function calculate_refund() {
+        TaxpayerTotalTax=parseInt(document.getElementById("TaxpayerTotalTax").innerHTML);
+        TaxpayerEITC=parseInt(document.getElementById("TaxpayerEITC").innerHTML);
+        TaxpayerACTC=parseInt(document.getElementById("TaxpayerACTC").innerHTML);
+        TaxpayerRefund=TaxpayerTotalTax-TaxpayerEITC-TaxpayerACTC
+        document.getElementById("TaxpayerRefund").innerHTML=TaxpayerRefund
+        SpouseTotalTax=parseInt(document.getElementById("SpouseTotalTax").innerHTML);
+        SpouseEITC=parseInt(document.getElementById("SpouseEITC").innerHTML);
+        SpouseACTC=parseInt(document.getElementById("SpouseACTC").innerHTML);
+        SpouseRefund=SpouseTotalTax-SpouseEITC-SpouseACTC
+        document.getElementById("SpouseRefund").innerHTML=SpouseRefund
+        JointTotalTax=parseInt(document.getElementById("JointTotalTax").innerHTML);
+        JointEITC=parseInt(document.getElementById("JointEITC").innerHTML);
+        JointACTC=parseInt(document.getElementById("JointACTC").innerHTML);
+        JointRefund=JointTotalTax-JointEITC-JointACTC
+        document.getElementById("JointRefund").innerHTML=JointRefund
+      }
+      function calculate_joint_ei() {
+        JointW2 = parseInt(document.getElementById("JointW2").innerHTML);
+        JointSE = parseInt(document.getElementById("JointSelfEmployment").innerHTML);
+        JointDeductibleSEtax=parseInt(document.getElementById("JointDeductibleSEtax").innerHTML);
+        return(JointW2+JointSE-JointDeductibleSEtax)
+      }
+      function calculate_taxpayer_ei() {
+        TaxpayerW2 = parseInt(document.getElementById("TaxpayerW2").value);
+        console.log("taxpayeW2",TaxpayerW2)
+        TaxpayerSE = parseInt(document.getElementById("TaxpayerSelfEmployment").value);
+        console.log("taxpayerSE",TaxpayerSE)
+        TaxpayerDeductibleSEtax=parseInt(document.getElementById("TaxpayerDeductibleSEtax").innerHTML);
+        console.log("taxpayerSEtax",TaxpayerDeductibleSEtax)
+        return(TaxpayerW2+TaxpayerSE-TaxpayerDeductibleSEtax)
+      }
+      function calculate_spouse_ei() {
+        SpouseW2 = parseInt(document.getElementById("SpouseW2").value);
+        SpouseSE = parseInt(document.getElementById("SpouseSelfEmployment").value);
+        SpouseDeductibleSEtax=parseInt(document.getElementById("SpouseDeductibleSEtax").innerHTML);
+        return(SpouseW2+SpouseSE-SpouseDeductibleSEtax)
+      }
+      function calculate_eitc() {
+        line1 = calculate_joint_ei()
+        //console.log("line1",line1)
+        num_dependents = parseInt(document.getElementById("JointDependentsEITC").value);
+        //line1=parseInt(document.getElementById("JointEI").innerHTML)
+        //console.log("num_dependents",num_dependents)
+        line2=lookup_eitc(line1,num_dependents)
+        //console.log("line2",line2)
+        line3=parseInt(document.getElementById("JointFederalAGI").innerHTML)
+        //console.log("line3",line3)
+        line4=Boolean(line1 == line3)
+        if (line4) {line6 = line2}
+        else {
+          if (((num_dependents == 0) && (line3 < 9200)) || ((num_dependents >= 1) && (line3 < 20150))) {
+            line6 = line2
+          } else {
+            line5=lookup_eitc(line3,num_dependents)
+            line6=Math.min(line5, line2)
+          }
+        }
+        document.getElementById("JointEITC").innerHTML=line6
+
+        function lookup_eitc(EI,num_dependents) {
+          
+          if (EI == 0) { return 0 }
+          var eitc_array_length = eitc_array.length;
+          //line1=eitc_array_length;
+          //console.log("JointEI",JointEI)
+          //console.log("num_dependents",num_dependents,"eitc_array_length",eitc_array_length)
+          for (i=0; i<eitc_array_length; i++) {
+            //console.log("EI",EI,"i",i,"ei",eitc_array[i][0])
+            if (EI < eitc_array[i][0]) {
+              //console.log("in if","EI",EI,"i",i,"ei",eitc_array[i][0])
+              return(eitc_array[i][num_dependents+5])
+            } 
+          } return 0
+        }
+      }
+      function calculate_total_tax() {
+        var TaxpayerTax = parseInt(document.getElementById("TaxpayerFedTaxPreCredit").innerHTML);
+        var TaxPayerNRC = parseInt(document.getElementById("TaxpayerNRC").innerHTML);
+        var TaxPayerSEtax=Math.round((0.9235*0.153)*parseInt(document.getElementById("TaxpayerSelfEmployment").value));
+        TaxpayerTotalTax=Math.max(0,TaxpayerTax-TaxPayerNRC)+TaxPayerSEtax;
+        document.getElementById("TaxpayerTotalTax").innerHTML = TaxpayerTotalTax
+
+        var SpouseTax = parseInt(document.getElementById("SpouseFedTaxPreCredit").innerHTML);
+        var SpouseNRC = parseInt(document.getElementById("SpouseNRC").innerHTML);
+        var SpouseSEtax=Math.round((0.9235*0.153)*parseInt(document.getElementById("SpouseSelfEmployment").value));
+        SpouseTotalTax=Math.max(0,SpouseTax-SpouseNRC)+SpouseSEtax;
+        document.getElementById("SpouseTotalTax").innerHTML = SpouseTotalTax
+
+        var JointTax = parseInt(document.getElementById("JointFedTaxPreCredit").innerHTML);
+        //console.log("JointTax",JointTax)
+        var JointNRC = parseInt(document.getElementById("JointNRC").innerHTML);
+        //console.log("jointNRC",JointNRC);
+        var JointSEtax=Math.round((0.9235*0.153)*parseInt(document.getElementById("JointSelfEmployment").innerHTML));
+        //console.log("JointSEtax",JointSEtax)
+        JointTotalTax=Math.max(0,JointTax-JointNRC)+JointSEtax;
+        document.getElementById("JointTotalTax").innerHTML = JointTotalTax
+      }
+      function calculate_other_tax() {
+        // SE tax is only other tax we will consider
+        var TaxPayerSEtax=Math.round((0.9235*0.153)*parseInt(document.getElementById("TaxpayerSelfEmployment").value));
+        var SpouseSEtax=Math.round((0.9235*0.153)*parseInt(document.getElementById("SpouseSelfEmployment").value));
+        var JointSEtax=Math.round((0.9235*0.153)*parseInt(document.getElementById("JointSelfEmployment").innerHTML));
+        document.getElementById("TaxpayerOtherTax").innerHTML=TaxPayerSEtax;
+        document.getElementById("SpouseOtherTax").innerHTML=SpouseSEtax;
+        document.getElementById("JointOtherTax").innerHTML=JointSEtax;
+      }
+      function calculate_nrc(){
+        var Taxpayer_CTC_COD=parseInt(document.getElementById("TaxpayerCTC_COD").innerHTML);
+        var Taxpayer_CDC=0;
+        var TaxpayerRSC=parseInt(document.getElementById("TaxpayerRSC").innerHTML);
+        document.getElementById("TaxpayerNRC").innerHTML=Taxpayer_CTC_COD+Taxpayer_CDC+TaxpayerRSC;
+        var Spouse_CTC_COD=parseInt(document.getElementById("SpouseCTC_COD").innerHTML);
+        var Spouse_CDC=0;
+        var SpouseRSC=parseInt(document.getElementById("SpouseRSC").innerHTML);
+        document.getElementById("SpouseNRC").innerHTML=Spouse_CTC_COD+Taxpayer_CDC+SpouseRSC;
+        var Joint_CTC_COD=parseInt(document.getElementById("JointCTC_COD").innerHTML);
+        var Joint_CDC=parseInt(document.getElementById("JointDeductibleCDCexpense").innerHTML);
+        var JointRSC=parseInt(document.getElementById("JointRSC").innerHTML);
+        document.getElementById("JointNRC").innerHTML=Joint_CTC_COD+Taxpayer_CDC+JointRSC;
+      }
+      function calculate_ctc() {
+        var Taxpayer_AGI = parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML);
+        var TaxpayerDependentCTC = parseInt(document.getElementById("TaxpayerDependentCTC").value);
+        //console.log(document.getElementById("TaxpayerDependentCTC").value)
+        //console.log("TaxpayerDependentCTC",TaxpayerDependentCTC)
+        var TaxpayerDependentCOD = parseInt(document.getElementById("TaxpayerDependentCOD").value);
+
+        var TaxpayerTax = parseInt(document.getElementById("TaxpayerFedTaxPreCredit").innerHTML);
+        TaxpayerRSC=parseInt(document.getElementById("TaxpayerRSC").innerHTML);
+        var Spouse_AGI = parseInt(document.getElementById("SpouseFederalAGI").innerHTML);
+        var SpouseDependentCTC = parseInt(document.getElementById("SpouseDependentCTC").value);
+        var SpouseDependentCOD = parseInt(document.getElementById("SpouseDependentCOD").value);
+        var SpouseTax = parseInt(document.getElementById("SpouseFedTaxPreCredit").innerHTML);
+        SpouseRSC=parseInt(document.getElementById("SpouseRSC").innerHTML);
+        var Joint_AGI = parseInt(document.getElementById("JointFederalAGI").innerHTML);
+        console.log("Joint_AGI",Joint_AGI)
+        JointDependentCTC=TaxpayerDependentCTC+SpouseDependentCTC;
+        JointDependentCOD=TaxpayerDependentCOD+SpouseDependentCOD;
+        JointRSC=parseInt(document.getElementById("JointRSC").innerHTML);
+        document.getElementById("JointDependentCTC").innerHTML=JointDependentCTC
+        document.getElementById("JointDependentCOD").innerHTML=JointDependentCOD
+        //var JointDependentCTC = parseInt(document.getElementById("JointDependentCTC").innerHTML);
+        //var JointDependentCOD = parseInt(document.getElementById("JointDependentCOD").innerHTML);
+        var JointTax = parseInt(document.getElementById("JointFedTaxPreCredit").innerHTML);
+        var JointCDC = parseInt(document.getElementById("JointDeductibleCDCexpense").innerHTML);
+        //console.log(Taxpayer_AGI,TaxpayerDependentCTC,TaxpayerDependentCOD,TaxpayerTax,0,"mfs")
+        var taxpayer_ctc_cod=fill_out_8812(Taxpayer_AGI,TaxpayerDependentCTC,TaxpayerDependentCOD,TaxpayerTax,0,TaxpayerRSC,"mfs");
+        //console.log("taxpayer_ctc_cod",taxpayer_ctc_cod);
+        document.getElementById("TaxpayerCTC_COD").innerHTML=taxpayer_ctc_cod;
+        var spouse_ctc_cod=fill_out_8812(Spouse_AGI,SpouseDependentCTC,SpouseDependentCOD,SpouseTax,0,SpouseRSC,"mfs");
+        //console.log("spouse_ctc_cod",spouse_ctc_cod);
+        document.getElementById("SpouseCTC_COD").innerHTML=spouse_ctc_cod;
+        var joint_ctc_cod=fill_out_8812(Joint_AGI,JointDependentCTC,JointDependentCOD,JointTax,JointCDC,JointRSC,"mfj");
+        //console.log("joint_ctc_cod",joint_ctc_cod);
+        document.getElementById("JointCTC_COD").innerHTML=joint_ctc_cod;
+
+        taxpayer_ei=calculate_taxpayer_ei()
+        console.log("taxpayer_ei",taxpayer_ei)
+        console.log("taxpayer 8812 part2")
+        taxpayer_actc=fill_out_8812_part2(Taxpayer_AGI,TaxpayerDependentCTC,TaxpayerDependentCOD,TaxpayerTax,0,TaxpayerRSC,"mfs",taxpayer_ei);
+        //console.log("taxpayer_actc", taxpayer_actc),
+        document.getElementById("TaxpayerACTC").innerHTML=Math.round(taxpayer_actc)
+        spouse_ei=calculate_spouse_ei()
+        console.log("spouse 8812 part2")
+        spouse_actc=fill_out_8812_part2(Spouse_AGI,SpouseDependentCTC,SpouseDependentCOD,SpouseTax,0,SpouseRSC,"mfs",spouse_ei);
+        //console.log("spouse_actc", spouse_actc)
+        document.getElementById("SpouseACTC").innerHTML=Math.round(spouse_actc)
+        joint_ei=calculate_joint_ei()
+        //console.log("Joint_AGI before call",Joint_AGI)
+        console.log("joint 8812 part2")
+        joint_actc=fill_out_8812_part2(Joint_AGI,JointDependentCTC,JointDependentCOD,JointTax,0,JointRSC,"mfj",joint_ei);
+        //console.log("joint_actc", joint_actc)
+        document.getElementById("JointACTC").innerHTML=Math.round(joint_actc)
+      }
+      function fill_out_8812_part2(agi,ctc,cod,tax,cdc,rsc,flavor,ei) {
+        console.log("8812 part2")
+        line1_agi = agi;
+        console.log("line1",line1_agi)
+        line2 = 0;
+        line3 = line1_agi+line2;
+        line4_ctc = ctc;
+        line5 = line4_ctc*2000;
+        console.log("line5",line5)
+        line6_cod = cod;
+        line7 = line6_cod*500
+        line8 = line5+line7;
+        console.log("line8",line8)
+        if (flavor=="mfj") {
+          line9=400000
+        } else {
+          line9=200000
+        }
+        line10a=Math.max(0,line3-line9)
+        if (line10a>0) {
+          line10=Math.ceil(line10a/1000)*1000;
+        } else { line10=0 }
+        line11=line10*.05;
+        console.log("line11",line11)
+        line12bool=Boolean(line8>line11);
+        console.log("line12bool",line12bool)
+        if (line12bool) {
+          line12=line8-line11;
+          console.log("line12",line12)
+        } else {
+          return 0
+        }
+        line13=get_credit_limit_worksheet_a(tax,cdc,rsc);
+        console.log("line13",line13)
+        line14=Math.min(line12, line13)
+        console.log("line14",line14)
+        line16a=line12-line14;
+        console.log("line16a",line16a) 
+        line16b=1500*document.getElementById("JointDependentCTC").innerHTML
+        console.log("line16b",line16b) 
+        if (line16a == 0) {return 0}
+        line17=Math.min(line16a,line16b)
+        console.log("line17",line17) 
+        line18a=ei
+        console.log("part 2 line18a",line18a)
+        line19bool=(line18a>2500)
+        console.log("line19bool",line19bool)
+        if (line19bool) {
+          line19=line18a-2500
+          
+        } else {
+          line19=0
+          line20 = 0
+        }  
+        console.log("line19",line19)
+        
+        line20=0.15*line19
+        console.log("line20",line20)
+        // Assume answer to line 20 is "No"
+        line27=Math.min(line17,line20) 
+        console.log("line27",line27)
+        return line27
+        
+      }
+      function fill_out_8812(agi,ctc,cod,tax,cdc,rsc,flavor) {
+        line1_agi = agi;
+        line2 = 0;
+        line3 = line1_agi+line2;
+        line4_ctc = ctc;
+        line5 = line4_ctc*2000;
+        //console.log("line5",line5)
+        line6_cod = cod;
+        line7 = line6_cod*500
+        line8 = line5+line7;
+        if (flavor=="mfj") {
+          line9=400000
+        } else {
+          line9=200000
+        }
+        line10a=Math.max(0,line3-line9)
+        if (line10a>0) {
+          line10=Math.ceil(line10a/1000)*1000;
+        } else { line10=0 }
+        line11=line10*.05;
+        //console.log("line11",line11)
+        line12bool=Boolean(line8>line11);
+        if (line12bool) {
+          line12=line8-line11;
+        } else {
+          return 0
+        }
+        line13=get_credit_limit_worksheet_a(tax,cdc,rsc);
+        //console.log("line13",line13)
+        line14=Math.min(line12, line13)
+        //console.log("line14",line14)
+        return line14;
+      }
+      function get_credit_limit_worksheet_a(tax, cdc,rsc) {
+        line1 = tax;
+        line2 = cdc+rsc; 
+        line3 = Math.max(0,line1-line2);
+        line4 = 0;
+        line5 = line3-line4;
+        return line5;
+      }
+      function calculate_cdc_credit() {
+        const cdc_multiplier = [[0,.35], [15000,.34], [17000,.33], [19000, .32], [21000,.31], [23000,.30],
+                            [25000,.29], [27000,.28], [29000,.27], [31000,.26], [33000,.25], [35000,.24],
+                            [37000,.23], [39000,.22], [41000,.21], [43000,.20]];
+        // line* variables in this function represent lines from form 2441
+        //console.log(document.getElementById("TaxpayerDependentCDC").value,document.getElementById("SpouseDependentCDC").value)
+        var DependentSum = parseInt(document.getElementById("JointDependentCDC").value)
+        
+        /*
+        if (DependentSum < 2) {
+          document.getElementById("JointDependentCDC").innerHTML = DependentSum;
+        } else {
+          document.getElementById("JointDependentCDC").innerHTML = "2 or more";
+        }
+        */
+        //document.getElementById("JointCDCexpenses").innerHTML=parseInt(document.getElementById("JointCDCexpenses").value);
+        //console.log("JointCDCexpenses", document.getElementById("JointCDCexpenses").innerHTML)
+        // Now calculate allowable credit
+        //console.log("DependentSum",DependentSum)
+        if (DependentSum == 1) {
+          var line3_Expense = Math.min(3000,parseInt(document.getElementById("JointCDCexpenses").value));
+          //document.getElementById("JointDeductibleCDCexpense").innerHTML=Math.min(3000,parseInt(document.getElementById("JointCDCexpenses").innerHTML))
+        } else if (DependentSum >=2) {
+          var line3_Expense = Math.min(6000,parseInt(document.getElementById("JointCDCexpenses").innerHTML));
+          //document.getElementById("JointDeductibleCDCexpense").innerHTML=Math.min(6000,parseInt(document.getElementById("JointCDCexpenses").innerHTML))
+        } else if (DependentSum == 0) {
+          var line3_Expense = 0;
+        }
+        var line4_taxpayerEI = parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML);
+        var line5_spouseEI = parseInt(document.getElementById("SpouseFederalAGI").innerHTML);
+        var line6_Allowable_expense = Math.min(line3_Expense,line4_taxpayerEI,line5_spouseEI);
+        //console.log(line3_Expense,line4_taxpayerEI,line5_spouseEI)
+        //console.log(line6_Allowable_expense);
+        var line7 = parseInt(document.getElementById("JointFederalAGI").innerHTML);
+        var jointEI = parseInt(document.getElementById("JointFederalAGI").innerHTML);
+        var line8_multiplier = get_cdc_multiplier(jointEI);
+        var line9_allowable_expense = line8_multiplier*line6_Allowable_expense
+        var line10_tax_liability = parseInt(document.getElementById("JointFedTaxPreCredit").innerHTML);
+        var line11_cdc_credit = Math.min(line10_tax_liability,line9_allowable_expense);
+        document.getElementById("JointDeductibleCDCexpense").innerHTML=line11_cdc_credit;
+      }
+
+      function get_cdc_multiplier(jointEI) {
+        const cdc_multiplier = [[0,.35], [15000,.34], [17000,.33], [19000, .32], [21000,.31], [23000,.30],
+                            [25000,.29], [27000,.28], [29000,.27], [31000,.26], [33000,.25], [35000,.24],
+                            [37000,.23], [39000,.22], [41000,.21], [43000,.20]];
+        array_length=cdc_multiplier.length;
+        for (let i=0; i < array_length-1; i++) {
+          //console.log("jointEI",jointEI,"cdc",cdc_multiplier[i+1][0])
+          if (jointEI == 0) {
+            return 0;
+          } else if (jointEI <= cdc_multiplier[i+1][0]) {
+            //console.log("multiplier",cdc_multiplier[i][1])
+            return(cdc_multiplier[i][1])
+          } 
+        }
+        return(cdc_multiplier[length][1])
+      }
+      function fed_tax(flavor,income) {
+        const RATE1=0.1;
+        const MFS_INCOME2=10275;
+        const MFJ_INCOME2=20550;
+        const MFS_BASE_TAX2=1027.5
+        const MFJ_BASE_TAX2=2055
+        const RATE2=0.12;
+        const MFS_INCOME3=41775;
+        const MFJ_INCOME3=83550;
+        const MFS_BASE_TAX3=4807.5
+        const MFJ_BASE_TAX3=9615
+        const RATE3=0.22;
+        const MFS_INCOME4=89075;
+        const MFJ_INCOME4=178150;
+        const MFS_BASE_TAX4=15213.5
+        const MFJ_BASE_TAX4=30427
+        const RATE4=0.24;
+        const MFS_INCOME5=170050;
+        const MFJ_INCOME5=340100;
+        const MFS_BASE_TAX5=34647.5
+        const MFJ_BASE_TAX5=69295
+        const RATE5=0.32;
+        const MFS_INCOME6=215950;
+        const MFJ_INCOME6=431900;
+        const MFS_BASE_TAX6=49335.5
+        const MFJ_BASE_TAX6=98671
+        const RATE6=0.35;
+        const MFS_INCOME7=323925;
+        const MFJ_INCOME7=647850;
+        const MFS_BASE_TAX7=87126.75
+        const MFJ_BASE_TAX7=174253.5
+        const RATE7=0.37;
+        
+        if (flavor == "mfs" ) {
+          if (income >= MFS_INCOME7) {
+            return(MFS_BASE_TAX7+RATE7*(income-MFS_INCOME7))
+          } else if (income >= MFS_INCOME6) {
+            return(MFS_BASE_TAX6+RATE6*(income-MFS_INCOME6))
+          } else if (income >= MFS_INCOME5) {
+            return(MFS_BASE_TAX5+RATE5*(income-MFS_INCOME5))
+          } else if (income >= MFS_INCOME4) {
+            return(MFS_BASE_TAX4+RATE4*(income-MFS_INCOME4))
+          } else if (income >= MFS_INCOME3) {
+            return(MFS_BASE_TAX3+RATE3*(income-MFS_INCOME3))
+          } else if (income >= MFS_INCOME2) {
+            return(MFS_BASE_TAX2+RATE2*(income-MFS_INCOME2))
+          } else {
+            return (RATE1*income)
+          }
+        
+        } else if (flavor == "mfj" ) {
+          //console.log("fed_income",income)
+          if (income >= MFJ_INCOME7) {
+            return(MFJ_BASE_TAX7+RATE7*(income-MFJ_INCOME7))
+          } else if (income >= MFJ_INCOME6) {
+            return(MFJ_BASE_TAX6+RATE6*(income-MFJ_INCOME6))
+          } else if (income >= MFJ_INCOME5) {
+            return(MFJ_BASE_TAX5+RATE5*(income-MFJ_INCOME5))
+          } else if (income >= MFJ_INCOME4) {
+            return(MFJ_BASE_TAX4+RATE4*(income-MFJ_INCOME4))
+          } else if (income >= MFJ_INCOME3) {
+            return(MFJ_BASE_TAX3+RATE3*(income-MFJ_INCOME3))
+          } else if (income >= MFJ_INCOME2) {
+            return(MFJ_BASE_TAX2+RATE2*(income-MFJ_INCOME2))
+          } else {
+            return (RATE1*income)
+          }
+        }
+      }
+      function calculate_fed_tax() {
+        document.getElementById("TaxpayerFedTaxPreCredit").innerHTML=Math.round(fed_tax("mfs",parseInt(document.getElementById("TaxpayerFedIncome").innerHTML)))
+        document.getElementById("SpouseFedTaxPreCredit").innerHTML=Math.round(fed_tax("mfs",parseInt(document.getElementById("SpouseFedIncome").innerHTML)))
+        document.getElementById("JointFedTaxPreCredit").innerHTML=Math.round(fed_tax("mfj",parseInt(document.getElementById("JointFedIncome").innerHTML)))
+
+      }
+      function calculate_federal_taxable_income() {
+        document.getElementById("TaxpayerFedIncome").innerHTML=Math.max(0,Math.round(parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML) 
+         - parseInt(document.getElementById("TaxpayerQBI").innerHTML)
+         - parseInt(document.getElementById("TaxpayerSD").innerHTML)));
+        document.getElementById("SpouseFedIncome").innerHTML=Math.max(0,Math.round(parseInt(document.getElementById("SpouseFederalAGI").innerHTML) 
+         - parseInt(document.getElementById("SpouseQBI").innerHTML)
+         - parseInt(document.getElementById("SpouseSD").innerHTML)));
+         document.getElementById("JointFedIncome").innerHTML=Math.max(0,Math.round(parseInt(document.getElementById("JointFederalAGI").innerHTML) 
+         - parseInt(document.getElementById("JointQBI").innerHTML)
+         - parseInt(document.getElementById("JointSD").innerHTML)));
+         //console.log(parseInt(document.getElementById("TaxpayerSD").innerHTML));
+      }
+      function calculate_qbi() {
+        document.getElementById("TaxpayerQBI").innerHTML=Math.round(0.2*(parseInt(document.getElementById("TaxpayerSelfEmployment").value) 
+         - parseInt(document.getElementById("TaxpayerDeductibleSEtax").innerHTML)));
+        document.getElementById("SpouseQBI").innerHTML=Math.round(0.2*(parseInt(document.getElementById("SpouseSelfEmployment").value) 
+         - parseInt(document.getElementById("SpouseDeductibleSEtax").innerHTML)));
+         document.getElementById("JointQBI").innerHTML=Math.round(0.2*(parseInt(document.getElementById("JointSelfEmployment").innerHTML) 
+         - parseInt(document.getElementById("JointDeductibleSEtax").innerHTML)));
+         //console.log(parseInt(document.getElementById("TaxpayerSelfEmployment").value));
+      }
+      function calculate_federal_agi() {
+        document.getElementById("TaxpayerFederalAGI").innerHTML=Math.round(parseInt(document.getElementById("TaxpayerTotalIncome").innerHTML) 
+         - parseInt(document.getElementById("TaxpayerDeductibleLoanInterest").innerHTML) +
+         - parseInt(document.getElementById("TaxpayerDeductibleSEtax").innerHTML));
+        document.getElementById("SpouseFederalAGI").innerHTML=Math.round(parseInt(document.getElementById("SpouseTotalIncome").innerHTML) 
+         - parseInt(document.getElementById("SpouseDeductibleLoanInterest").innerHTML) +
+         - parseInt(document.getElementById("SpouseDeductibleSEtax").innerHTML));
+         document.getElementById("JointFederalAGI").innerHTML=Math.round(parseInt(document.getElementById("JointTotalIncome").innerHTML) 
+         - parseInt(document.getElementById("JointDeductibleLoanInterest").innerHTML) +
+         - parseInt(document.getElementById("JointDeductibleSEtax").innerHTML));
+      }
+      function calculate_deductible_se_tax() {
+        document.getElementById("TaxpayerDeductibleSEtax").innerHTML=Math.round((0.9235*0.153/2)*parseInt(document.getElementById("TaxpayerSelfEmployment").value));
+        document.getElementById("SpouseDeductibleSEtax").innerHTML=Math.round((0.9235*0.153/2)*parseInt(document.getElementById("SpouseSelfEmployment").value));
+        document.getElementById("JointDeductibleSEtax").innerHTML=Math.round((0.9235*0.153/2)*parseInt(document.getElementById("JointSelfEmployment").innerHTML));
+
+    
+      }
+      function calculate_total_income() {
+        var joint_w2_income = parseInt(document.getElementById("JointW2").innerHTML);
+        var joint_1099r_income = parseInt(document.getElementById("Joint1099R").innerHTML);
+        var joint_1099g_income = parseInt(document.getElementById("Joint1099G").innerHTML);
+        var joint_1099int_income = parseInt(document.getElementById("Joint1099INT").innerHTML);
+        var joint_1099SE_income = parseInt(document.getElementById("JointSelfEmployment").innerHTML);
+        var joint_taxable_SS_income = parseInt(document.getElementById("Joint1099SSA_taxable").innerHTML);
+        //console.log(joint_w2_income,joint_1099r_income,joint_1099g_income,joint_1099int_income,joint_1099SE_income,joint_taxable_SS_income)
+        document.getElementById("JointTotalIncome").innerHTML=joint_w2_income+joint_1099r_income+joint_1099g_income+joint_1099int_income+joint_1099SE_income+joint_taxable_SS_income;
+
+        var taxpayer_w2_income = parseInt(document.getElementById("TaxpayerW2").value);
+        var taxpayer_1099r_income = parseInt(document.getElementById("Taxpayer1099R").value);
+        var taxpayer_1099g_income = parseInt(document.getElementById("Taxpayer1099G").value);
+        var taxpayer_1099int_income = parseInt(document.getElementById("Taxpayer1099INT").value);
+        var taxpayer_1099SE_income = parseInt(document.getElementById("TaxpayerSelfEmployment").value);
+        var taxpayer_taxable_SS_income = parseInt(document.getElementById("Taxpayer1099SSA_taxable").innerHTML);
+        //console.log(taxpayer_taxable_SS_income)
+
+        document.getElementById("TaxpayerTotalIncome").innerHTML=taxpayer_w2_income+taxpayer_1099r_income+taxpayer_1099g_income+taxpayer_1099int_income+taxpayer_1099SE_income+taxpayer_taxable_SS_income;
+
+        var spouse_w2_income = parseInt(document.getElementById("SpouseW2").value);
+        var spouse_1099r_income = parseInt(document.getElementById("Spouse1099R").value);
+        var spouse_1099g_income = parseInt(document.getElementById("Spouse1099G").value);
+        var spouse_1099int_income = parseInt(document.getElementById("Spouse1099INT").value);
+        var spouse_1099SE_income = parseInt(document.getElementById("SpouseSelfEmployment").value);
+        var spouse_taxable_SS_income = parseInt(document.getElementById("Spouse1099SSA_taxable").innerHTML);
+        document.getElementById("SpouseTotalIncome").innerHTML=spouse_w2_income+spouse_1099r_income+spouse_1099g_income+spouse_1099int_income+spouse_1099SE_income+spouse_taxable_SS_income;
+
+      }
+      function populate_joint_column() {
+        document.getElementById("JointW2").innerHTML=parseInt(document.getElementById("TaxpayerW2").value)+parseInt(document.getElementById("SpouseW2").value);
+        document.getElementById("Joint1099R").innerHTML=parseInt(document.getElementById("Taxpayer1099R").value)+parseInt(document.getElementById("Spouse1099R").value);
+        document.getElementById("Joint1099G").innerHTML=parseInt(document.getElementById("Taxpayer1099G").value)+parseInt(document.getElementById("Spouse1099G").value);
+        document.getElementById("Joint1099INT").innerHTML=parseInt(document.getElementById("Taxpayer1099INT").value)+parseInt(document.getElementById("Spouse1099INT").value);
+        document.getElementById("JointSelfEmployment").innerHTML=parseInt(document.getElementById("TaxpayerSelfEmployment").value)+parseInt(document.getElementById("SpouseSelfEmployment").value);
+        document.getElementById("Joint1099SSA").innerHTML=parseInt(document.getElementById("Taxpayer1099SSA").value)+parseInt(document.getElementById("Spouse1099SSA").value);
+
+      }
+      function populate_social_security_mfs() {
+        document.getElementById("Taxpayer1099SSA_taxable").innerHTML=Math.round(0.85*parseInt(document.getElementById("Taxpayer1099SSA").value));
+        document.getElementById("Spouse1099SSA_taxable").innerHTML=Math.round(0.85*parseInt(document.getElementById("Spouse1099SSA").value));
+        //console.log(parseInt(Math.round(document.getElementById("Taxpayer1099SSA_taxable").innerHTML)));
+        //console.log(document.getElementById("Taxpayer1099SSA_taxable").value);
+        //console.log(document.getElementById("Taxpayer1099SSA_taxable").innerHTML);
+      }
+      function populate_loan_interest_mfj() {
+        //var taxpayer_loan_interest = parseInt(document.getElementById("TaxpayerLoanInterest").value);
+        var joint_loan_interest = parseInt(document.getElementById("JointLoanInterest").value);
+        //document.getElementById("JointLoanInterest").innerHTML=taxpayer_loan_interest+spouse_loan_interest;
+        document.getElementById("JointDeductibleLoanInterest").innerHTML=Math.min(2500,joint_loan_interest);
+
+        //console.log(parseInt(document.getElementById("Taxpayer1099SSA").value))
+      }
+      function populate_social_security_mfj() {
+        var w2_income = parseInt(document.getElementById("JointW2").innerHTML);
+        //console.log("w2_income",w2_income)
+        var x1099r_income = parseInt(document.getElementById("Joint1099R").innerHTML);
+        var x1099g_income = parseInt(document.getElementById("Joint1099G").innerHTML);
+        var x1099int_income = parseInt(document.getElementById("Joint1099INT").innerHTML);
+        var x1099SE_income = parseInt(document.getElementById("JointSelfEmployment").innerHTML);
+        var student_loan_interest = parseInt(document.getElementById("JointDeductibleLoanInterest").innerHTML);
+        var JointDeductibleSEtax = parseInt(document.getElementById("JointDeductibleSEtax").innerHTML);
+
+        var line1_SS_Income = parseInt(document.getElementById("Joint1099SSA").innerHTML);
+        var line2_50_percent_SS_income = Math.round(0.5*line1_SS_Income);
+        //console.log("line2",line2_50_percent_SS_income)
+        line3=w2_income+x1099r_income+x1099int_income+x1099g_income+x1099SE_income;
+        var line5_income = line2_50_percent_SS_income+line3+0;
+
+        //console.log("line5",line5_income)
+        var line6_deductions = student_loan_interest + JointDeductibleSEtax
+        //console.log("line6",line6_deductions)
+        if (line6_deductions < line5_income) {
+          var line7 = line5_income - line6_deductions;
+          //console.log("line7",line7)
+          line8 = Math.round(32000);
+          if (line8 < line7) {
+            var line9 = line7 - line8;
+            //console.log("line9",line9)
+            var line10 = Math.round(12000);
+            var line11a = line9 - line10;
+            if (line11a <= 0) {
+              var line11 = 0;
+            } else {
+              var line11 = line11a;
+            }
+            var line12 = Math.min(line9,line10);
+            //console.log("line12",line12)
+            var line13 = Math.round(0.5*line12);
+            //console.log("line13",line13)
+            var line14 = Math.round(Math.min(line2_50_percent_SS_income,line13));
+            //console.log("line14",line14)
+            var line15 = Math.round(0.85 * line11);
+            //console.log("line15",line15)
+            var line16 = line14 + line15;
+            //console.log("line16",line16)
+            var line17 = Math.round(0.85 * line1_SS_Income);
+            //console.log("line17",line17)
+            var line18 = Math.round(Math.min(line16, line17));
+            //console.log("line18",line18)
+            
+            document.getElementById("Joint1099SSA_taxable").innerHTML = Math.round(line18);
+            return;
+          } else {
+            document.getElementById("Joint1099SSA_taxable").value = 0;
+            return;
+          }
+        } else {
+          document.getElementById("Joint1099SSA_taxable").value = 0;
+          return;
+        }
+      }
+      // no ACA, education credits, dividends, AMT, capital gains, penalized early withdrawawls
+      // no taxable OH business income
+      // if less than first element, next 4 are mfs, then next 4 are mfj
+// element 1: income less than this
+// elements 2/3/4/5: EITC for 0, 1, 2, 3 children for MFS
+// elements 6/7/8/9: EITC for 0, 1, 2, 3 children for MFJ
+const eitc_array = [
+[50,2,9,10,11,2,9,10,11],
+[100,6,26,30,34,6,26,30,34],
+[150,10,43,50,56,10,43,50,56],
+[200,13,60,70,79,13,60,70,79],
+[250,17,77,90,101,17,77,90,101],
+[300,21,94,110,124,21,94,110,124],
+[350,25,111,130,146,25,111,130,146],
+[400,29,128,150,169,29,128,150,169],
+[450,33,145,170,191,33,145,170,191],
+[500,36,162,190,214,36,162,190,214],
+[550,40,179,210,236,40,179,210,236],
+[600,44,196,230,259,44,196,230,259],
+[650,48,213,250,281,48,213,250,281],
+[700,52,230,270,304,52,230,270,304],
+[750,55,247,290,326,55,247,290,326],
+[800,59,264,310,349,59,264,310,349],
+[850,63,281,330,371,63,281,330,371],
+[900,67,298,350,394,67,298,350,394],
+[950,71,315,370,416,71,315,370,416],
+[1000,75,332,390,439,75,332,390,439],
+[1050,78,349,410,461,78,349,410,461],
+[1100,82,366,430,484,82,366,430,484],
+[1150,86,383,450,506,86,383,450,506],
+[1200,90,400,470,529,90,400,470,529],
+[1250,94,417,490,551,94,417,490,551],
+[1300,98,434,510,574,98,434,510,574],
+[1350,101,451,530,596,101,451,530,596],
+[1400,105,468,550,619,105,468,550,619],
+[1450,109,485,570,641,109,485,570,641],
+[1500,113,502,590,664,113,502,590,664],
+[1550,117,519,610,686,117,519,610,686],
+[1600,120,536,630,709,120,536,630,709],
+[1650,124,553,650,731,124,553,650,731],
+[1700,128,570,670,754,128,570,670,754],
+[1750,132,587,690,776,132,587,690,776],
+[1800,136,604,710,799,136,604,710,799],
+[1850,140,621,730,821,140,621,730,821],
+[1900,143,638,750,844,143,638,750,844],
+[1950,147,655,770,866,147,655,770,866],
+[2000,151,672,790,889,151,672,790,889],
+[2050,155,689,810,911,155,689,810,911],
+[2100,159,706,830,934,159,706,830,934],
+[2150,163,723,850,956,163,723,850,956],
+[2200,166,740,870,979,166,740,870,979],
+[2250,170,757,890,1001,170,757,890,1001],
+[2300,174,774,910,1024,174,774,910,1024],
+[2350,178,791,930,1046,178,791,930,1046],
+[2400,182,808,950,1069,182,808,950,1069],
+[2450,186,825,970,1091,186,825,970,1091],
+[2500,189,842,990,1114,189,842,990,1114],
+[2550,193,859,1010,1136,193,859,1010,1136],
+[2600,197,876,1030,1159,197,876,1030,1159],
+[2650,201,893,1050,1181,201,893,1050,1181],
+[2700,205,910,1070,1204,205,910,1070,1204],
+[2750,208,927,1090,1226,208,927,1090,1226],
+[2800,212,944,1110,1249,212,944,1110,1249],
+[2850,216,961,1130,1271,216,961,1130,1271],
+[2900,220,978,1150,1294,220,978,1150,1294],
+[2950,224,995,1170,1316,224,995,1170,1316],
+[3000,228,1012,1190,1339,228,1012,1190,1339],
+[3050,231,1029,1210,1361,231,1029,1210,1361],
+[3100,235,1046,1230,1384,235,1046,1230,1384],
+[3150,239,1063,1250,1406,239,1063,1250,1406],
+[3200,243,1080,1270,1429,243,1080,1270,1429],
+[3250,247,1097,1290,1451,247,1097,1290,1451],
+[3300,251,1114,1310,1474,251,1114,1310,1474],
+[3350,254,1131,1330,1496,254,1131,1330,1496],
+[3400,258,1148,1350,1519,258,1148,1350,1519],
+[3450,262,1165,1370,1541,262,1165,1370,1541],
+[3500,266,1182,1390,1564,266,1182,1390,1564],
+[3550,270,1199,1410,1586,270,1199,1410,1586],
+[3600,273,1216,1430,1609,273,1216,1430,1609],
+[3650,277,1233,1450,1631,277,1233,1450,1631],
+[3700,281,1250,1470,1654,281,1250,1470,1654],
+[3750,285,1267,1490,1676,285,1267,1490,1676],
+[3800,289,1284,1510,1699,289,1284,1510,1699],
+[3850,293,1301,1530,1721,293,1301,1530,1721],
+[3900,296,1318,1550,1744,296,1318,1550,1744],
+[3950,300,1335,1570,1766,300,1335,1570,1766],
+[4000,304,1352,1590,1789,304,1352,1590,1789],
+[4050,308,1369,1610,1811,308,1369,1610,1811],
+[4100,312,1386,1630,1834,312,1386,1630,1834],
+[4150,316,1403,1650,1856,316,1403,1650,1856],
+[4200,319,1420,1670,1879,319,1420,1670,1879],
+[4250,323,1437,1690,1901,323,1437,1690,1901],
+[4300,327,1454,1710,1924,327,1454,1710,1924],
+[4350,331,1471,1730,1946,331,1471,1730,1946],
+[4400,335,1488,1750,1969,335,1488,1750,1969],
+[4450,339,1505,1770,1991,339,1505,1770,1991],
+[4500,342,1522,1790,2014,342,1522,1790,2014],
+[4550,346,1539,1810,2036,346,1539,1810,2036],
+[4600,350,1556,1830,2059,350,1556,1830,2059],
+[4650,354,1573,1850,2081,354,1573,1850,2081],
+[4700,358,1590,1870,2104,358,1590,1870,2104],
+[4750,361,1607,1890,2126,361,1607,1890,2126],
+[4800,365,1624,1910,2149,365,1624,1910,2149],
+[4850,369,1641,1930,2171,369,1641,1930,2171],
+[4900,373,1658,1950,2194,373,1658,1950,2194],
+[4950,377,1675,1970,2216,377,1675,1970,2216],
+[5000,381,1692,1990,2239,381,1692,1990,2239],
+[5050,384,1709,2010,2261,384,1709,2010,2261],
+[5100,388,1726,2030,2284,388,1726,2030,2284],
+[5150,392,1743,2050,2306,392,1743,2050,2306],
+[5200,396,1760,2070,2329,396,1760,2070,2329],
+[5250,400,1777,2090,2351,400,1777,2090,2351],
+[5300,404,1794,2110,2374,404,1794,2110,2374],
+[5350,407,1811,2130,2396,407,1811,2130,2396],
+[5400,411,1828,2150,2419,411,1828,2150,2419],
+[5450,415,1845,2170,2441,415,1845,2170,2441],
+[5500,419,1862,2190,2464,419,1862,2190,2464],
+[5550,423,1879,2210,2486,423,1879,2210,2486],
+[5600,426,1896,2230,2509,426,1896,2230,2509],
+[5650,430,1913,2250,2531,430,1913,2250,2531],
+[5700,434,1930,2270,2554,434,1930,2270,2554],
+[5750,438,1947,2290,2576,438,1947,2290,2576],
+[5800,442,1964,2310,2599,442,1964,2310,2599],
+[5850,446,1981,2330,2621,446,1981,2330,2621],
+[5900,449,1998,2350,2644,449,1998,2350,2644],
+[5950,453,2015,2370,2666,453,2015,2370,2666],
+[6000,457,2032,2390,2689,457,2032,2390,2689],
+[6050,461,2049,2410,2711,461,2049,2410,2711],
+[6100,465,2066,2430,2734,465,2066,2430,2734],
+[6150,469,2083,2450,2756,469,2083,2450,2756],
+[6200,472,2100,2470,2779,472,2100,2470,2779],
+[6250,476,2117,2490,2801,476,2117,2490,2801],
+[6300,480,2134,2510,2824,480,2134,2510,2824],
+[6350,484,2151,2530,2846,484,2151,2530,2846],
+[6400,488,2168,2550,2869,488,2168,2550,2869],
+[6450,492,2185,2570,2891,492,2185,2570,2891],
+[6500,495,2202,2590,2914,495,2202,2590,2914],
+[6550,499,2219,2610,2936,499,2219,2610,2936],
+[6600,503,2236,2630,2959,503,2236,2630,2959],
+[6650,507,2253,2650,2981,507,2253,2650,2981],
+[6700,511,2270,2670,3004,511,2270,2670,3004],
+[6750,514,2287,2690,3026,514,2287,2690,3026],
+[6800,518,2304,2710,3049,518,2304,2710,3049],
+[6850,522,2321,2730,3071,522,2321,2730,3071],
+[6900,526,2338,2750,3094,526,2338,2750,3094],
+[6950,530,2355,2770,3116,530,2355,2770,3116],
+[7000,534,2372,2790,3139,534,2372,2790,3139],
+[7050,537,2389,2810,3161,537,2389,2810,3161],
+[7100,541,2406,2830,3184,541,2406,2830,3184],
+[7150,545,2423,2850,3206,545,2423,2850,3206],
+[7200,549,2440,2870,3229,549,2440,2870,3229],
+[7250,553,2457,2890,3251,553,2457,2890,3251],
+[7300,557,2474,2910,3274,557,2474,2910,3274],
+[7350,560,2491,2930,3296,560,2491,2930,3296],
+[7400,560,2508,2950,3319,560,2508,2950,3319],
+[7450,560,2525,2970,3341,560,2525,2970,3341],
+[7500,560,2542,2990,3364,560,2542,2990,3364],
+[7550,560,2559,3010,3386,560,2559,3010,3386],
+[7600,560,2576,3030,3409,560,2576,3030,3409],
+[7650,560,2593,3050,3431,560,2593,3050,3431],
+[7700,560,2610,3070,3454,560,2610,3070,3454],
+[7750,560,2627,3090,3476,560,2627,3090,3476],
+[7800,560,2644,3110,3499,560,2644,3110,3499],
+[7850,560,2661,3130,3521,560,2661,3130,3521],
+[7900,560,2678,3150,3544,560,2678,3150,3544],
+[7950,560,2695,3170,3566,560,2695,3170,3566],
+[8000,560,2712,3190,3589,560,2712,3190,3589],
+[8050,560,2729,3210,3611,560,2729,3210,3611],
+[8100,560,2746,3230,3634,560,2746,3230,3634],
+[8150,560,2763,3250,3656,560,2763,3250,3656],
+[8200,560,2780,3270,3679,560,2780,3270,3679],
+[8250,560,2797,3290,3701,560,2797,3290,3701],
+[8300,560,2814,3310,3724,560,2814,3310,3724],
+[8350,560,2831,3330,3746,560,2831,3330,3746],
+[8400,560,2848,3350,3769,560,2848,3350,3769],
+[8450,560,2865,3370,3791,560,2865,3370,3791],
+[8500,560,2882,3390,3814,560,2882,3390,3814],
+[8550,560,2899,3410,3836,560,2899,3410,3836],
+[8600,560,2916,3430,3859,560,2916,3430,3859],
+[8650,560,2933,3450,3881,560,2933,3450,3881],
+[8700,560,2950,3470,3904,560,2950,3470,3904],
+[8750,560,2967,3490,3926,560,2967,3490,3926],
+[8800,560,2984,3510,3949,560,2984,3510,3949],
+[8850,560,3001,3530,3971,560,3001,3530,3971],
+[8900,560,3018,3550,3994,560,3018,3550,3994],
+[8950,560,3035,3570,4016,560,3035,3570,4016],
+[9000,560,3052,3590,4039,560,3052,3590,4039],
+[9050,560,3069,3610,4061,560,3069,3610,4061],
+[9100,560,3086,3630,4084,560,3086,3630,4084],
+[9150,560,3103,3650,4106,560,3103,3650,4106],
+[9200,560,3120,3670,4129,560,3120,3670,4129],
+[9250,555,3137,3690,4151,560,3137,3690,4151],
+[9300,551,3154,3710,4174,560,3154,3710,4174],
+[9350,547,3171,3730,4196,560,3171,3730,4196],
+[9400,544,3188,3750,4219,560,3188,3750,4219],
+[9450,540,3205,3770,4241,560,3205,3770,4241],
+[9500,536,3222,3790,4264,560,3222,3790,4264],
+[9550,532,3239,3810,4286,560,3239,3810,4286],
+[9600,528,3256,3830,4309,560,3256,3830,4309],
+[9650,524,3273,3850,4331,560,3273,3850,4331],
+[9700,521,3290,3870,4354,560,3290,3870,4354],
+[9750,517,3307,3890,4376,560,3307,3890,4376],
+[9800,513,3324,3910,4399,560,3324,3910,4399],
+[9850,509,3341,3930,4421,560,3341,3930,4421],
+[9900,505,3358,3950,4444,560,3358,3950,4444],
+[9950,501,3375,3970,4466,560,3375,3970,4466],
+[10000,498,3392,3990,4489,560,3392,3990,4489],
+[10050,494,3409,4010,4511,560,3409,4010,4511],
+[10100,490,3426,4030,4534,560,3426,4030,4534],
+[10150,486,3443,4050,4556,560,3443,4050,4556],
+[10200,482,3460,4070,4579,560,3460,4070,4579],
+[10250,479,3477,4090,4601,560,3477,4090,4601],
+[10300,475,3494,4110,4624,560,3494,4110,4624],
+[10350,471,3511,4130,4646,560,3511,4130,4646],
+[10400,467,3528,4150,4669,560,3528,4150,4669],
+[10450,463,3545,4170,4691,560,3545,4170,4691],
+[10500,459,3562,4190,4714,560,3562,4190,4714],
+[10550,456,3579,4210,4736,560,3579,4210,4736],
+[10600,452,3596,4230,4759,560,3596,4230,4759],
+[10650,448,3613,4250,4781,560,3613,4250,4781],
+[10700,444,3630,4270,4804,560,3630,4270,4804],
+[10750,440,3647,4290,4826,560,3647,4290,4826],
+[10800,436,3664,4310,4849,560,3664,4310,4849],
+[10850,433,3681,4330,4871,560,3681,4330,4871],
+[10900,429,3698,4350,4894,560,3698,4350,4894],
+[10950,425,3715,4370,4916,560,3715,4370,4916],
+[11000,421,3733,4390,4939,560,3733,4390,4939],
+[11050,417,3733,4410,4961,560,3733,4410,4961],
+[11100,413,3733,4430,4984,560,3733,4430,4984],
+[11150,410,3733,4450,5006,560,3733,4450,5006],
+[11200,406,3733,4470,5029,560,3733,4470,5029],
+[11250,402,3733,4490,5051,560,3733,4490,5051],
+[11300,398,3733,4510,5074,560,3733,4510,5074],
+[11350,394,3733,4530,5096,560,3733,4530,5096],
+[11400,391,3733,4550,5119,560,3733,4550,5119],
+[11450,387,3733,4570,5141,560,3733,4570,5141],
+[11500,383,3733,4590,5164,560,3733,4590,5164],
+[11550,379,3733,4610,5186,560,3733,4610,5186],
+[11600,375,3733,4630,5209,560,3733,4630,5209],
+[11650,371,3733,4650,5231,560,3733,4650,5231],
+[11700,368,3733,4670,5254,560,3733,4670,5254],
+[11750,364,3733,4690,5276,560,3733,4690,5276],
+[11800,360,3733,4710,5299,560,3733,4710,5299],
+[11850,356,3733,4730,5321,560,3733,4730,5321],
+[11900,352,3733,4750,5344,560,3733,4750,5344],
+[11950,348,3733,4770,5366,560,3733,4770,5366],
+[12000,345,3733,4790,5389,560,3733,4790,5389],
+[12050,341,3733,4810,5411,560,3733,4810,5411],
+[12100,337,3733,4830,5434,560,3733,4830,5434],
+[12150,333,3733,4850,5456,560,3733,4850,5456],
+[12200,329,3733,4870,5479,560,3733,4870,5479],
+[12250,326,3733,4890,5501,560,3733,4890,5501],
+[12300,322,3733,4910,5524,560,3733,4910,5524],
+[12350,318,3733,4930,5546,560,3733,4930,5546],
+[12400,314,3733,4950,5569,560,3733,4950,5569],
+[12450,310,3733,4970,5591,560,3733,4970,5591],
+[12500,306,3733,4990,5614,560,3733,4990,5614],
+[12550,303,3733,5010,5636,560,3733,5010,5636],
+[12600,299,3733,5030,5659,560,3733,5030,5659],
+[12650,295,3733,5050,5681,560,3733,5050,5681],
+[12700,291,3733,5070,5704,560,3733,5070,5704],
+[12750,287,3733,5090,5726,560,3733,5090,5726],
+[12800,283,3733,5110,5749,560,3733,5110,5749],
+[12850,280,3733,5130,5771,560,3733,5130,5771],
+[12900,276,3733,5150,5794,560,3733,5150,5794],
+[12950,272,3733,5170,5816,560,3733,5170,5816],
+[13000,268,3733,5190,5839,560,3733,5190,5839],
+[13050,264,3733,5210,5861,560,3733,5210,5861],
+[13100,260,3733,5230,5884,560,3733,5230,5884],
+[13150,257,3733,5250,5906,560,3733,5250,5906],
+[13200,253,3733,5270,5929,560,3733,5270,5929],
+[13250,249,3733,5290,5951,560,3733,5290,5951],
+[13300,245,3733,5310,5974,560,3733,5310,5974],
+[13350,241,3733,5330,5996,560,3733,5330,5996],
+[13400,238,3733,5350,6019,560,3733,5350,6019],
+[13450,234,3733,5370,6041,560,3733,5370,6041],
+[13500,230,3733,5390,6064,560,3733,5390,6064],
+[13550,226,3733,5410,6086,560,3733,5410,6086],
+[13600,222,3733,5430,6109,560,3733,5430,6109],
+[13650,218,3733,5450,6131,560,3733,5450,6131],
+[13700,215,3733,5470,6154,560,3733,5470,6154],
+[13750,211,3733,5490,6176,560,3733,5490,6176],
+[13800,207,3733,5510,6199,560,3733,5510,6199],
+[13850,203,3733,5530,6221,560,3733,5530,6221],
+[13900,199,3733,5550,6244,560,3733,5550,6244],
+[13950,195,3733,5570,6266,560,3733,5570,6266],
+[14000,192,3733,5590,6289,560,3733,5590,6289],
+[14050,188,3733,5610,6311,560,3733,5610,6311],
+[14100,184,3733,5630,6334,560,3733,5630,6334],
+[14150,180,3733,5650,6356,560,3733,5650,6356],
+[14200,176,3733,5670,6379,560,3733,5670,6379],
+[14250,173,3733,5690,6401,560,3733,5690,6401],
+[14300,169,3733,5710,6424,560,3733,5710,6424],
+[14350,165,3733,5730,6446,560,3733,5730,6446],
+[14400,161,3733,5750,6469,560,3733,5750,6469],
+[14450,157,3733,5770,6491,560,3733,5770,6491],
+[14500,153,3733,5790,6514,560,3733,5790,6514],
+[14550,150,3733,5810,6536,560,3733,5810,6536],
+[14600,146,3733,5830,6559,560,3733,5830,6559],
+[14650,142,3733,5850,6581,560,3733,5850,6581],
+[14700,138,3733,5870,6604,560,3733,5870,6604],
+[14750,134,3733,5890,6626,560,3733,5890,6626],
+[14800,130,3733,5910,6649,560,3733,5910,6649],
+[14850,127,3733,5930,6671,560,3733,5930,6671],
+[14900,123,3733,5950,6694,560,3733,5950,6694],
+[14950,119,3733,5970,6716,560,3733,5970,6716],
+[15000,115,3733,5990,6739,560,3733,5990,6739],
+[15050,111,3733,6010,6761,560,3733,6010,6761],
+[15100,107,3733,6030,6784,560,3733,6030,6784],
+[15150,104,3733,6050,6806,560,3733,6050,6806],
+[15200,100,3733,6070,6829,560,3733,6070,6829],
+[15250,96,3733,6090,6851,560,3733,6090,6851],
+[15300,92,3733,6110,6874,560,3733,6110,6874],
+[15350,88,3733,6130,6896,557,3733,6130,6896],
+[15400,85,3733,6150,6919,553,3733,6150,6919],
+[15450,81,3733,6164,6935,550,3733,6164,6935],
+[15500,77,3733,6164,6935,546,3733,6164,6935],
+[15550,73,3733,6164,6935,542,3733,6164,6935],
+[15600,69,3733,6164,6935,538,3733,6164,6935],
+[15650,65,3733,6164,6935,534,3733,6164,6935],
+[15700,62,3733,6164,6935,531,3733,6164,6935],
+[15750,58,3733,6164,6935,527,3733,6164,6935],
+[15800,54,3733,6164,6935,523,3733,6164,6935],
+[15850,50,3733,6164,6935,519,3733,6164,6935],
+[15900,46,3733,6164,6935,515,3733,6164,6935],
+[15950,42,3733,6164,6935,511,3733,6164,6935],
+[16000,39,3733,6164,6935,508,3733,6164,6935],
+[16050,35,3733,6164,6935,504,3733,6164,6935],
+[16100,31,3733,6164,6935,500,3733,6164,6935],
+[16150,27,3733,6164,6935,496,3733,6164,6935],
+[16200,23,3733,6164,6935,492,3733,6164,6935],
+[16250,20,3733,6164,6935,488,3733,6164,6935],
+[16300,16,3733,6164,6935,485,3733,6164,6935],
+[16350,12,3733,6164,6935,481,3733,6164,6935],
+[16400,8,3733,6164,6935,477,3733,6164,6935],
+[16450,4,3733,6164,6935,473,3733,6164,6935],
+[16480,1,3733,6164,6935,469,3733,6164,6935],
+[16550,0,3733,6164,6935,466,3733,6164,6935],
+[16600,0,3733,6164,6935,462,3733,6164,6935],
+[16650,0,3733,6164,6935,458,3733,6164,6935],
+[16700,0,3733,6164,6935,454,3733,6164,6935],
+[16750,0,3733,6164,6935,450,3733,6164,6935],
+[16800,0,3733,6164,6935,446,3733,6164,6935],
+[16850,0,3733,6164,6935,443,3733,6164,6935],
+[16900,0,3733,6164,6935,439,3733,6164,6935],
+[16950,0,3733,6164,6935,435,3733,6164,6935],
+[17000,0,3733,6164,6935,431,3733,6164,6935],
+[17050,0,3733,6164,6935,427,3733,6164,6935],
+[17100,0,3733,6164,6935,423,3733,6164,6935],
+[17150,0,3733,6164,6935,420,3733,6164,6935],
+[17200,0,3733,6164,6935,416,3733,6164,6935],
+[17250,0,3733,6164,6935,412,3733,6164,6935],
+[17300,0,3733,6164,6935,408,3733,6164,6935],
+[17350,0,3733,6164,6935,404,3733,6164,6935],
+[17400,0,3733,6164,6935,400,3733,6164,6935],
+[17450,0,3733,6164,6935,397,3733,6164,6935],
+[17500,0,3733,6164,6935,393,3733,6164,6935],
+[17550,0,3733,6164,6935,389,3733,6164,6935],
+[17600,0,3733,6164,6935,385,3733,6164,6935],
+[17650,0,3733,6164,6935,381,3733,6164,6935],
+[17700,0,3733,6164,6935,378,3733,6164,6935],
+[17750,0,3733,6164,6935,374,3733,6164,6935],
+[17800,0,3733,6164,6935,370,3733,6164,6935],
+[17850,0,3733,6164,6935,366,3733,6164,6935],
+[17900,0,3733,6164,6935,362,3733,6164,6935],
+[17950,0,3733,6164,6935,358,3733,6164,6935],
+[18000,0,3733,6164,6935,355,3733,6164,6935],
+[18050,0,3733,6164,6935,351,3733,6164,6935],
+[18100,0,3733,6164,6935,347,3733,6164,6935],
+[18150,0,3733,6164,6935,343,3733,6164,6935],
+[18200,0,3733,6164,6935,339,3733,6164,6935],
+[18250,0,3733,6164,6935,335,3733,6164,6935],
+[18300,0,3733,6164,6935,332,3733,6164,6935],
+[18350,0,3733,6164,6935,328,3733,6164,6935],
+[18400,0,3733,6164,6935,324,3733,6164,6935],
+[18450,0,3733,6164,6935,320,3733,6164,6935],
+[18500,0,3733,6164,6935,316,3733,6164,6935],
+[18550,0,3733,6164,6935,313,3733,6164,6935],
+[18600,0,3733,6164,6935,309,3733,6164,6935],
+[18650,0,3733,6164,6935,305,3733,6164,6935],
+[18700,0,3733,6164,6935,301,3733,6164,6935],
+[18750,0,3733,6164,6935,297,3733,6164,6935],
+[18800,0,3733,6164,6935,293,3733,6164,6935],
+[18850,0,3733,6164,6935,290,3733,6164,6935],
+[18900,0,3733,6164,6935,286,3733,6164,6935],
+[18950,0,3733,6164,6935,282,3733,6164,6935],
+[19000,0,3733,6164,6935,278,3733,6164,6935],
+[19050,0,3733,6164,6935,274,3733,6164,6935],
+[19100,0,3733,6164,6935,270,3733,6164,6935],
+[19150,0,3733,6164,6935,267,3733,6164,6935],
+[19200,0,3733,6164,6935,263,3733,6164,6935],
+[19250,0,3733,6164,6935,259,3733,6164,6935],
+[19300,0,3733,6164,6935,255,3733,6164,6935],
+[19350,0,3733,6164,6935,251,3733,6164,6935],
+[19400,0,3733,6164,6935,247,3733,6164,6935],
+[19450,0,3733,6164,6935,244,3733,6164,6935],
+[19500,0,3733,6164,6935,240,3733,6164,6935],
+[19550,0,3733,6164,6935,236,3733,6164,6935],
+[19600,0,3733,6164,6935,232,3733,6164,6935],
+[19650,0,3733,6164,6935,228,3733,6164,6935],
+[19700,0,3733,6164,6935,225,3733,6164,6935],
+[19750,0,3733,6164,6935,221,3733,6164,6935],
+[19800,0,3733,6164,6935,217,3733,6164,6935],
+[19850,0,3733,6164,6935,213,3733,6164,6935],
+[19900,0,3733,6164,6935,209,3733,6164,6935],
+[19950,0,3733,6164,6935,205,3733,6164,6935],
+[20000,0,3733,6164,6935,202,3733,6164,6935],
+[20050,0,3733,6164,6935,198,3733,6164,6935],
+[20100,0,3733,6164,6935,194,3733,6164,6935],
+[20150,0,3733,6164,6935,190,3733,6164,6935],
+[20200,0,3726,6155,6925,186,3733,6164,6935],
+[20250,0,3718,6144,6914,182,3733,6164,6935],
+[20300,0,3710,6133,6904,179,3733,6164,6935],
+[20350,0,3702,6123,6893,175,3733,6164,6935],
+[20400,0,3694,6112,6883,171,3733,6164,6935],
+[20450,0,3686,6102,6872,167,3733,6164,6935],
+[20500,0,3678,6091,6862,163,3733,6164,6935],
+[20550,0,3670,6081,6851,160,3733,6164,6935],
+[20600,0,3662,6070,6841,156,3733,6164,6935],
+[20650,0,3654,6060,6830,152,3733,6164,6935],
+[20700,0,3646,6049,6820,148,3733,6164,6935],
+[20750,0,3638,6039,6809,144,3733,6164,6935],
+[20800,0,3630,6028,6799,140,3733,6164,6935],
+[20850,0,3622,6018,6788,137,3733,6164,6935],
+[20900,0,3614,6007,6778,133,3733,6164,6935],
+[20950,0,3606,5997,6767,129,3733,6164,6935],
+[21000,0,3598,5986,6757,125,3733,6164,6935],
+[21050,0,3590,5976,6746,121,3733,6164,6935],
+[21100,0,3582,5965,6735,117,3733,6164,6935],
+[21150,0,3574,5954,6725,114,3733,6164,6935],
+[21200,0,3566,5944,6714,110,3733,6164,6935],
+[21250,0,3558,5933,6704,106,3733,6164,6935],
+[21300,0,3550,5923,6693,102,3733,6164,6935],
+[21350,0,3542,5912,6683,98,3733,6164,6935],
+[21400,0,3534,5902,6672,94,3733,6164,6935],
+[21450,0,3526,5891,6662,91,3733,6164,6935],
+[21500,0,3518,5881,6651,87,3733,6164,6935],
+[21550,0,3510,5870,6641,83,3733,6164,6935],
+[21600,0,3502,5860,6630,79,3733,6164,6935],
+[21650,0,3494,5849,6620,75,3733,6164,6935],
+[21700,0,3486,5839,6609,72,3733,6164,6935],
+[21750,0,3478,5828,6599,68,3733,6164,6935],
+[21800,0,3470,5818,6588,64,3733,6164,6935],
+[21850,0,3462,5807,6578,60,3733,6164,6935],
+[21900,0,3454,5797,6567,56,3733,6164,6935],
+[21950,0,3446,5786,6556,52,3733,6164,6935],
+[22000,0,3438,5775,6546,49,3733,6164,6935],
+[22050,0,3430,5765,6535,45,3733,6164,6935],
+[22100,0,3422,5754,6525,41,3733,6164,6935],
+[22150,0,3414,5744,6514,37,3733,6164,6935],
+[22200,0,3406,5733,6504,33,3733,6164,6935],
+[22250,0,3398,5723,6493,29,3733,6164,6935],
+[22300,0,3390,5712,6483,26,3733,6164,6935],
+[22350,0,3382,5702,6472,22,3733,6164,6935],
+[22400,0,3374,5691,6462,18,3733,6164,6935],
+[22450,0,3366,5681,6451,14,3733,6164,6935],
+[22500,0,3358,5670,6441,10,3733,6164,6935],
+[22550,0,3350,5660,6430,7,3733,6164,6935],
+[22600,0,3342,5649,6420,3,3733,6164,6935],
+[22650,0,3334,5639,6409,0,3733,6164,6935],
+[22700,0,3327,5628,6399,0,3733,6164,6935],
+[22750,0,3319,5617,6388,0,3733,6164,6935],
+[22800,0,3311,5607,6377,0,3733,6164,6935],
+[22850,0,3303,5596,6367,0,3733,6164,6935],
+[22900,0,3295,5586,6356,0,3733,6164,6935],
+[22950,0,3287,5575,6346,0,3733,6164,6935],
+[23000,0,3279,5565,6335,0,3733,6164,6935],
+[23050,0,3271,5554,6325,0,3733,6164,6935],
+[23100,0,3263,5544,6314,0,3733,6164,6935],
+[23150,0,3255,5533,6304,0,3733,6164,6935],
+[23200,0,3247,5523,6293,0,3733,6164,6935],
+[23250,0,3239,5512,6283,0,3733,6164,6935],
+[23300,0,3231,5502,6272,0,3733,6164,6935],
+[23350,0,3223,5491,6262,0,3733,6164,6935],
+[23400,0,3215,5481,6251,0,3733,6164,6935],
+[23450,0,3207,5470,6241,0,3733,6164,6935],
+[23500,0,3199,5460,6230,0,3733,6164,6935],
+[23550,0,3191,5449,6220,0,3733,6164,6935],
+[23600,0,3183,5438,6209,0,3733,6164,6935],
+[23650,0,3175,5428,6198,0,3733,6164,6935],
+[23700,0,3167,5417,6188,0,3733,6164,6935],
+[23750,0,3159,5407,6177,0,3733,6164,6935],
+[23800,0,3151,5396,6167,0,3733,6164,6935],
+[23850,0,3143,5386,6156,0,3733,6164,6935],
+[23900,0,3135,5375,6146,0,3733,6164,6935],
+[23950,0,3127,5365,6135,0,3733,6164,6935],
+[24000,0,3119,5354,6125,0,3733,6164,6935],
+[24050,0,3111,5344,6114,0,3733,6164,6935],
+[24100,0,3103,5333,6104,0,3733,6164,6935],
+[24150,0,3095,5323,6093,0,3733,6164,6935],
+[24200,0,3087,5312,6083,0,3733,6164,6935],
+[24250,0,3079,5302,6072,0,3733,6164,6935],
+[24300,0,3071,5291,6062,0,3733,6164,6935],
+[24350,0,3063,5281,6051,0,3733,6164,6935],
+[24400,0,3055,5270,6041,0,3733,6164,6935],
+[24450,0,3047,5259,6030,0,3733,6164,6935],
+[24500,0,3039,5249,6019,0,3733,6164,6935],
+[24550,0,3031,5238,6009,0,3733,6164,6935],
+[24600,0,3023,5228,5998,0,3733,6164,6935],
+[24650,0,3015,5217,5988,0,3733,6164,6935],
+[24700,0,3007,5207,5977,0,3733,6164,6935],
+[24750,0,2999,5196,5967,0,3733,6164,6935],
+[24800,0,2991,5186,5956,0,3733,6164,6935],
+[24850,0,2983,5175,5946,0,3733,6164,6935],
+[24900,0,2975,5165,5935,0,3733,6164,6935],
+[24950,0,2967,5154,5925,0,3733,6164,6935],
+[25000,0,2959,5144,5914,0,3733,6164,6935],
+[25050,0,2951,5133,5904,0,3733,6164,6935],
+[25100,0,2943,5123,5893,0,3733,6164,6935],
+[25150,0,2935,5112,5883,0,3733,6164,6935],
+[25200,0,2927,5102,5872,0,3733,6164,6935],
+[25250,0,2919,5091,5861,0,3733,6164,6935],
+[25300,0,2911,5080,5851,0,3733,6164,6935],
+[25350,0,2903,5070,5840,0,3733,6164,6935],
+[25400,0,2895,5059,5830,0,3733,6164,6935],
+[25450,0,2887,5049,5819,0,3733,6164,6935],
+[25500,0,2879,5038,5809,0,3733,6164,6935],
+[25550,0,2871,5028,5798,0,3733,6164,6935],
+[25600,0,2863,5017,5788,0,3733,6164,6935],
+[25650,0,2855,5007,5777,0,3733,6164,6935],
+[25700,0,2847,4996,5767,0,3733,6164,6935],
+[25750,0,2839,4986,5756,0,3733,6164,6935],
+[25800,0,2831,4975,5746,0,3733,6164,6935],
+[25850,0,2823,4965,5735,0,3733,6164,6935],
+[25900,0,2815,4954,5725,0,3733,6164,6935],
+[25950,0,2807,4944,5714,0,3733,6164,6935],
+[26000,0,2799,4933,5704,0,3733,6164,6935],
+[26050,0,2791,4923,5693,0,3733,6164,6935],
+[26100,0,2783,4912,5682,0,3733,6164,6935],
+[26150,0,2775,4901,5672,0,3733,6164,6935],
+[26200,0,2767,4891,5661,0,3733,6164,6935],
+[26250,0,2759,4880,5651,0,3733,6164,6935],
+[26300,0,2751,4870,5640,0,3733,6164,6935],
+[26350,0,2743,4859,5630,0,3723,6150,6921],
+[26400,0,2735,4849,5619,0,3715,6140,6910],
+[26450,0,2727,4838,5609,0,3707,6129,6900],
+[26500,0,2719,4828,5598,0,3699,6119,6889],
+[26550,0,2711,4817,5588,0,3691,6108,6879],
+[26600,0,2703,4807,5577,0,3683,6098,6868],
+[26650,0,2695,4796,5567,0,3675,6087,6858],
+[26700,0,2687,4786,5556,0,3667,6077,6847],
+[26750,0,2679,4775,5546,0,3659,6066,6837],
+[26800,0,2671,4765,5535,0,3651,6056,6826],
+[26850,0,2663,4754,5525,0,3643,6045,6816],
+[26900,0,2655,4744,5514,0,3635,6034,6805],
+[26950,0,2647,4733,5503,0,3627,6024,6794],
+[27000,0,2639,4722,5493,0,3619,6013,6784],
+[27050,0,2631,4712,5482,0,3611,6003,6773],
+[27100,0,2623,4701,5472,0,3603,5992,6763],
+[27150,0,2615,4691,5461,0,3595,5982,6752],
+[27200,0,2607,4680,5451,0,3587,5971,6742],
+[27250,0,2599,4670,5440,0,3579,5961,6731],
+[27300,0,2591,4659,5430,0,3571,5950,6721],
+[27350,0,2583,4649,5419,0,3563,5940,6710],
+[27400,0,2575,4638,5409,0,3555,5929,6700],
+[27450,0,2567,4628,5398,0,3547,5919,6689],
+[27500,0,2559,4617,5388,0,3539,5908,6679],
+[27550,0,2551,4607,5377,0,3531,5898,6668],
+[27600,0,2543,4596,5367,0,3523,5887,6658],
+[27650,0,2535,4586,5356,0,3515,5877,6647],
+[27700,0,2528,4575,5346,0,3507,5866,6637],
+[27750,0,2520,4564,5335,0,3499,5855,6626],
+[27800,0,2512,4554,5324,0,3491,5845,6615],
+[27850,0,2504,4543,5314,0,3483,5834,6605],
+[27900,0,2496,4533,5303,0,3475,5824,6594],
+[27950,0,2488,4522,5293,0,3467,5813,6584],
+[28000,0,2480,4512,5282,0,3459,5803,6573],
+[28050,0,2472,4501,5272,0,3451,5792,6563],
+[28100,0,2464,4491,5261,0,3443,5782,6552],
+[28150,0,2456,4480,5251,0,3435,5771,6542],
+[28200,0,2448,4470,5240,0,3427,5761,6531],
+[28250,0,2440,4459,5230,0,3419,5750,6521],
+[28300,0,2432,4449,5219,0,3411,5740,6510],
+[28350,0,2424,4438,5209,0,3403,5729,6500],
+[28400,0,2416,4428,5198,0,3395,5719,6489],
+[28450,0,2408,4417,5188,0,3387,5708,6479],
+[28500,0,2400,4407,5177,0,3379,5698,6468],
+[28550,0,2392,4396,5167,0,3371,5687,6457],
+[28600,0,2384,4385,5156,0,3363,5676,6447],
+[28650,0,2376,4375,5145,0,3355,5666,6436],
+[28700,0,2368,4364,5135,0,3347,5655,6426],
+[28750,0,2360,4354,5124,0,3339,5645,6415],
+[28800,0,2352,4343,5114,0,3331,5634,6405],
+[28850,0,2344,4333,5103,0,3323,5624,6394],
+[28900,0,2336,4322,5093,0,3315,5613,6384],
+[28950,0,2328,4312,5082,0,3307,5603,6373],
+[29000,0,2320,4301,5072,0,3299,5592,6363],
+[29050,0,2312,4291,5061,0,3291,5582,6352],
+[29100,0,2304,4280,5051,0,3283,5571,6342],
+[29150,0,2296,4270,5040,0,3275,5561,6331],
+[29200,0,2288,4259,5030,0,3267,5550,6321],
+[29250,0,2280,4249,5019,0,3259,5540,6310],
+[29300,0,2272,4238,5009,0,3251,5529,6300],
+[29350,0,2264,4228,4998,0,3243,5519,6289],
+[29400,0,2256,4217,4988,0,3235,5508,6278],
+[29450,0,2248,4206,4977,0,3227,5497,6268],
+[29500,0,2240,4196,4966,0,3219,5487,6257],
+[29550,0,2232,4185,4956,0,3211,5476,6247],
+[29600,0,2224,4175,4945,0,3203,5466,6236],
+[29650,0,2216,4164,4935,0,3195,5455,6226],
+[29700,0,2208,4154,4924,0,3187,5445,6215],
+[29750,0,2200,4143,4914,0,3179,5434,6205],
+[29800,0,2192,4133,4903,0,3172,5424,6194],
+[29850,0,2184,4122,4893,0,3164,5413,6184],
+[29900,0,2176,4112,4882,0,3156,5403,6173],
+[29950,0,2168,4101,4872,0,3148,5392,6163],
+[30000,0,2160,4091,4861,0,3140,5382,6152],
+[30050,0,2152,4080,4851,0,3132,5371,6142],
+[30100,0,2144,4070,4840,0,3124,5361,6131],
+[30150,0,2136,4059,4830,0,3116,5350,6121],
+[30200,0,2128,4049,4819,0,3108,5340,6110],
+[30250,0,2120,4038,4808,0,3100,5329,6099],
+[30300,0,2112,4027,4798,0,3092,5318,6089],
+[30350,0,2104,4017,4787,0,3084,5308,6078],
+[30400,0,2096,4006,4777,0,3076,5297,6068],
+[30450,0,2088,3996,4766,0,3068,5287,6057],
+[30500,0,2080,3985,4756,0,3060,5276,6047],
+[30550,0,2072,3975,4745,0,3052,5266,6036],
+[30600,0,2064,3964,4735,0,3044,5255,6026],
+[30650,0,2056,3954,4724,0,3036,5245,6015],
+[30700,0,2048,3943,4714,0,3028,5234,6005],
+[30750,0,2040,3933,4703,0,3020,5224,5994],
+[30800,0,2032,3922,4693,0,3012,5213,5984],
+[30850,0,2024,3912,4682,0,3004,5203,5973],
+[30900,0,2016,3901,4672,0,2996,5192,5963],
+[30950,0,2008,3891,4661,0,2988,5182,5952],
+[31000,0,2000,3880,4651,0,2980,5171,5942],
+[31050,0,1992,3870,4640,0,2972,5160,5931],
+[31100,0,1984,3859,4629,0,2964,5150,5920],
+[31150,0,1976,3848,4619,0,2956,5139,5910],
+[31200,0,1968,3838,4608,0,2948,5129,5899],
+[31250,0,1960,3827,4598,0,2940,5118,5889],
+[31300,0,1952,3817,4587,0,2932,5108,5878],
+[31350,0,1944,3806,4577,0,2924,5097,5868],
+[31400,0,1936,3796,4566,0,2916,5087,5857],
+[31450,0,1928,3785,4556,0,2908,5076,5847],
+[31500,0,1920,3775,4545,0,2900,5066,5836],
+[31550,0,1912,3764,4535,0,2892,5055,5826],
+[31600,0,1904,3754,4524,0,2884,5045,5815],
+[31650,0,1896,3743,4514,0,2876,5034,5805],
+[31700,0,1888,3733,4503,0,2868,5024,5794],
+[31750,0,1880,3722,4493,0,2860,5013,5784],
+[31800,0,1872,3712,4482,0,2852,5003,5773],
+[31850,0,1864,3701,4472,0,2844,4992,5763],
+[31900,0,1856,3691,4461,0,2836,4981,5752],
+[31950,0,1848,3680,4450,0,2828,4971,5741],
+[32000,0,1840,3669,4440,0,2820,4960,5731],
+[32050,0,1832,3659,4429,0,2812,4950,5720],
+[32100,0,1824,3648,4419,0,2804,4939,5710],
+[32150,0,1816,3638,4408,0,2796,4929,5699],
+[32200,0,1808,3627,4398,0,2788,4918,5689],
+[32250,0,1800,3617,4387,0,2780,4908,5678],
+[32300,0,1792,3606,4377,0,2772,4897,5668],
+[32350,0,1784,3596,4366,0,2764,4887,5657],
+[32400,0,1776,3585,4356,0,2756,4876,5647],
+[32450,0,1768,3575,4345,0,2748,4866,5636],
+[32500,0,1760,3564,4335,0,2740,4855,5626],
+[32550,0,1752,3554,4324,0,2732,4845,5615],
+[32600,0,1744,3543,4314,0,2724,4834,5605],
+[32650,0,1736,3533,4303,0,2716,4824,5594],
+[32700,0,1729,3522,4293,0,2708,4813,5584],
+[32750,0,1721,3511,4282,0,2700,4802,5573],
+[32800,0,1713,3501,4271,0,2692,4792,5562],
+[32850,0,1705,3490,4261,0,2684,4781,5552],
+[32900,0,1697,3480,4250,0,2676,4771,5541],
+[32950,0,1689,3469,4240,0,2668,4760,5531],
+[33000,0,1681,3459,4229,0,2660,4750,5520],
+[33050,0,1673,3448,4219,0,2652,4739,5510],
+[33100,0,1665,3438,4208,0,2644,4729,5499],
+[33150,0,1657,3427,4198,0,2636,4718,5489],
+[33200,0,1649,3417,4187,0,2628,4708,5478],
+[33250,0,1641,3406,4177,0,2620,4697,5468],
+[33300,0,1633,3396,4166,0,2612,4687,5457],
+[33350,0,1625,3385,4156,0,2604,4676,5447],
+[33400,0,1617,3375,4145,0,2596,4666,5436],
+[33450,0,1609,3364,4135,0,2588,4655,5426],
+[33500,0,1601,3354,4124,0,2580,4645,5415],
+[33550,0,1593,3343,4114,0,2572,4634,5404],
+[33600,0,1585,3332,4103,0,2564,4623,5394],
+[33650,0,1577,3322,4092,0,2556,4613,5383],
+[33700,0,1569,3311,4082,0,2548,4602,5373],
+[33750,0,1561,3301,4071,0,2540,4592,5362],
+[33800,0,1553,3290,4061,0,2532,4581,5352],
+[33850,0,1545,3280,4050,0,2524,4571,5341],
+[33900,0,1537,3269,4040,0,2516,4560,5331],
+[33950,0,1529,3259,4029,0,2508,4550,5320],
+[34000,0,1521,3248,4019,0,2500,4539,5310],
+[34050,0,1513,3238,4008,0,2492,4529,5299],
+[34100,0,1505,3227,3998,0,2484,4518,5289],
+[34150,0,1497,3217,3987,0,2476,4508,5278],
+[34200,0,1489,3206,3977,0,2468,4497,5268],
+[34250,0,1481,3196,3966,0,2460,4487,5257],
+[34300,0,1473,3185,3956,0,2452,4476,5247],
+[34350,0,1465,3175,3945,0,2444,4466,5236],
+[34400,0,1457,3164,3935,0,2436,4455,5225],
+[34450,0,1449,3153,3924,0,2428,4444,5215],
+[34500,0,1441,3143,3913,0,2420,4434,5204],
+[34550,0,1433,3132,3903,0,2412,4423,5194],
+[34600,0,1425,3122,3892,0,2404,4413,5183],
+[34650,0,1417,3111,3882,0,2396,4402,5173],
+[34700,0,1409,3101,3871,0,2388,4392,5162],
+[34750,0,1401,3090,3861,0,2380,4381,5152],
+[34800,0,1393,3080,3850,0,2373,4371,5141],
+[34850,0,1385,3069,3840,0,2365,4360,5131],
+[34900,0,1377,3059,3829,0,2357,4350,5120],
+[34950,0,1369,3048,3819,0,2349,4339,5110],
+[35000,0,1361,3038,3808,0,2341,4329,5099],
+[35050,0,1353,3027,3798,0,2333,4318,5089],
+[35100,0,1345,3017,3787,0,2325,4308,5078],
+[35150,0,1337,3006,3777,0,2317,4297,5068],
+[35200,0,1329,2996,3766,0,2309,4287,5057],
+[35250,0,1321,2985,3755,0,2301,4276,5046],
+[35300,0,1313,2974,3745,0,2293,4265,5036],
+[35350,0,1305,2964,3734,0,2285,4255,5025],
+[35400,0,1297,2953,3724,0,2277,4244,5015],
+[35450,0,1289,2943,3713,0,2269,4234,5004],
+[35500,0,1281,2932,3703,0,2261,4223,4994],
+[35550,0,1273,2922,3692,0,2253,4213,4983],
+[35600,0,1265,2911,3682,0,2245,4202,4973],
+[35650,0,1257,2901,3671,0,2237,4192,4962],
+[35700,0,1249,2890,3661,0,2229,4181,4952],
+[35750,0,1241,2880,3650,0,2221,4171,4941],
+[35800,0,1233,2869,3640,0,2213,4160,4931],
+[35850,0,1225,2859,3629,0,2205,4150,4920],
+[35900,0,1217,2848,3619,0,2197,4139,4910],
+[35950,0,1209,2838,3608,0,2189,4129,4899],
+[36000,0,1201,2827,3598,0,2181,4118,4889],
+[36050,0,1193,2817,3587,0,2173,4107,4878],
+[36100,0,1185,2806,3576,0,2165,4097,4867],
+[36150,0,1177,2795,3566,0,2157,4086,4857],
+[36200,0,1169,2785,3555,0,2149,4076,4846],
+[36250,0,1161,2774,3545,0,2141,4065,4836],
+[36300,0,1153,2764,3534,0,2133,4055,4825],
+[36350,0,1145,2753,3524,0,2125,4044,4815],
+[36400,0,1137,2743,3513,0,2117,4034,4804],
+[36450,0,1129,2732,3503,0,2109,4023,4794],
+[36500,0,1121,2722,3492,0,2101,4013,4783],
+[36550,0,1113,2711,3482,0,2093,4002,4773],
+[36600,0,1105,2701,3471,0,2085,3992,4762],
+[36650,0,1097,2690,3461,0,2077,3981,4752],
+[36700,0,1089,2680,3450,0,2069,3971,4741],
+[36750,0,1081,2669,3440,0,2061,3960,4731],
+[36800,0,1073,2659,3429,0,2053,3950,4720],
+[36850,0,1065,2648,3419,0,2045,3939,4710],
+[36900,0,1057,2638,3408,0,2037,3928,4699],
+[36950,0,1049,2627,3397,0,2029,3918,4688],
+[37000,0,1041,2616,3387,0,2021,3907,4678],
+[37050,0,1033,2606,3376,0,2013,3897,4667],
+[37100,0,1025,2595,3366,0,2005,3886,4657],
+[37150,0,1017,2585,3355,0,1997,3876,4646],
+[37200,0,1009,2574,3345,0,1989,3865,4636],
+[37250,0,1001,2564,3334,0,1981,3855,4625],
+[37300,0,993,2553,3324,0,1973,3844,4615],
+[37350,0,985,2543,3313,0,1965,3834,4604],
+[37400,0,977,2532,3303,0,1957,3823,4594],
+[37450,0,969,2522,3292,0,1949,3813,4583],
+[37500,0,961,2511,3282,0,1941,3802,4573],
+[37550,0,953,2501,3271,0,1933,3792,4562],
+[37600,0,945,2490,3261,0,1925,3781,4552],
+[37650,0,937,2480,3250,0,1917,3771,4541],
+[37700,0,930,2469,3240,0,1909,3760,4531],
+[37750,0,922,2458,3229,0,1901,3749,4520],
+[37800,0,914,2448,3218,0,1893,3739,4509],
+[37850,0,906,2437,3208,0,1885,3728,4499],
+[37900,0,898,2427,3197,0,1877,3718,4488],
+[37950,0,890,2416,3187,0,1869,3707,4478],
+[38000,0,882,2406,3176,0,1861,3697,4467],
+[38050,0,874,2395,3166,0,1853,3686,4457],
+[38100,0,866,2385,3155,0,1845,3676,4446],
+[38150,0,858,2374,3145,0,1837,3665,4436],
+[38200,0,850,2364,3134,0,1829,3655,4425],
+[38250,0,842,2353,3124,0,1821,3644,4415],
+[38300,0,834,2343,3113,0,1813,3634,4404],
+[38350,0,826,2332,3103,0,1805,3623,4394],
+[38400,0,818,2322,3092,0,1797,3613,4383],
+[38450,0,810,2311,3082,0,1789,3602,4373],
+[38500,0,802,2301,3071,0,1781,3592,4362],
+[38550,0,794,2290,3061,0,1773,3581,4351],
+[38600,0,786,2279,3050,0,1765,3570,4341],
+[38650,0,778,2269,3039,0,1757,3560,4330],
+[38700,0,770,2258,3029,0,1749,3549,4320],
+[38750,0,762,2248,3018,0,1741,3539,4309],
+[38800,0,754,2237,3008,0,1733,3528,4299],
+[38850,0,746,2227,2997,0,1725,3518,4288],
+[38900,0,738,2216,2987,0,1717,3507,4278],
+[38950,0,730,2206,2976,0,1709,3497,4267],
+[39000,0,722,2195,2966,0,1701,3486,4257],
+[39050,0,714,2185,2955,0,1693,3476,4246],
+[39100,0,706,2174,2945,0,1685,3465,4236],
+[39150,0,698,2164,2934,0,1677,3455,4225],
+[39200,0,690,2153,2924,0,1669,3444,4215],
+[39250,0,682,2143,2913,0,1661,3434,4204],
+[39300,0,674,2132,2903,0,1653,3423,4194],
+[39350,0,666,2122,2892,0,1645,3413,4183],
+[39400,0,658,2111,2882,0,1637,3402,4172],
+[39450,0,650,2100,2871,0,1629,3391,4162],
+[39500,0,642,2090,2860,0,1621,3381,4151],
+[39550,0,634,2079,2850,0,1613,3370,4141],
+[39600,0,626,2069,2839,0,1605,3360,4130],
+[39650,0,618,2058,2829,0,1597,3349,4120],
+[39700,0,610,2048,2818,0,1589,3339,4109],
+[39750,0,602,2037,2808,0,1581,3328,4099],
+[39800,0,594,2027,2797,0,1574,3318,4088],
+[39850,0,586,2016,2787,0,1566,3307,4078],
+[39900,0,578,2006,2776,0,1558,3297,4067],
+[39950,0,570,1995,2766,0,1550,3286,4057],
+[40000,0,562,1985,2755,0,1542,3276,4046],
+[40050,0,554,1974,2745,0,1534,3265,4036],
+[40100,0,546,1964,2734,0,1526,3255,4025],
+[40150,0,538,1953,2724,0,1518,3244,4015],
+[40200,0,530,1943,2713,0,1510,3234,4004],
+[40250,0,522,1932,2702,0,1502,3223,3993],
+[40300,0,514,1921,2692,0,1494,3212,3983],
+[40350,0,506,1911,2681,0,1486,3202,3972],
+[40400,0,498,1900,2671,0,1478,3191,3962],
+[40450,0,490,1890,2660,0,1470,3181,3951],
+[40500,0,482,1879,2650,0,1462,3170,3941],
+[40550,0,474,1869,2639,0,1454,3160,3930],
+[40600,0,466,1858,2629,0,1446,3149,3920],
+[40650,0,458,1848,2618,0,1438,3139,3909],
+[40700,0,450,1837,2608,0,1430,3128,3899],
+[40750,0,442,1827,2597,0,1422,3118,3888],
+[40800,0,434,1816,2587,0,1414,3107,3878],
+[40850,0,426,1806,2576,0,1406,3097,3867],
+[40900,0,418,1795,2566,0,1398,3086,3857],
+[40950,0,410,1785,2555,0,1390,3076,3846],
+[41000,0,402,1774,2545,0,1382,3065,3836],
+[41050,0,394,1764,2534,0,1374,3054,3825],
+[41100,0,386,1753,2523,0,1366,3044,3814],
+[41150,0,378,1742,2513,0,1358,3033,3804],
+[41200,0,370,1732,2502,0,1350,3023,3793],
+[41250,0,362,1721,2492,0,1342,3012,3783],
+[41300,0,354,1711,2481,0,1334,3002,3772],
+[41350,0,346,1700,2471,0,1326,2991,3762],
+[41400,0,338,1690,2460,0,1318,2981,3751],
+[41450,0,330,1679,2450,0,1310,2970,3741],
+[41500,0,322,1669,2439,0,1302,2960,3730],
+[41550,0,314,1658,2429,0,1294,2949,3720],
+[41600,0,306,1648,2418,0,1286,2939,3709],
+[41650,0,298,1637,2408,0,1278,2928,3699],
+[41700,0,290,1627,2397,0,1270,2918,3688],
+[41750,0,282,1616,2387,0,1262,2907,3678],
+[41800,0,274,1606,2376,0,1254,2897,3667],
+[41850,0,266,1595,2366,0,1246,2886,3657],
+[41900,0,258,1585,2355,0,1238,2875,3646],
+[41950,0,250,1574,2344,0,1230,2865,3635],
+[42000,0,242,1563,2334,0,1222,2854,3625],
+[42050,0,234,1553,2323,0,1214,2844,3614],
+[42100,0,226,1542,2313,0,1206,2833,3604],
+[42150,0,218,1532,2302,0,1198,2823,3593],
+[42200,0,210,1521,2292,0,1190,2812,3583],
+[42250,0,202,1511,2281,0,1182,2802,3572],
+[42300,0,194,1500,2271,0,1174,2791,3562],
+[42350,0,186,1490,2260,0,1166,2781,3551],
+[42400,0,178,1479,2250,0,1158,2770,3541],
+[42450,0,170,1469,2239,0,1150,2760,3530],
+[42500,0,162,1458,2229,0,1142,2749,3520],
+[42550,0,154,1448,2218,0,1134,2739,3509],
+[42600,0,146,1437,2208,0,1126,2728,3499],
+[42650,0,138,1427,2197,0,1118,2718,3488],
+[42700,0,131,1416,2187,0,1110,2707,3478],
+[42750,0,123,1405,2176,0,1102,2696,3467],
+[42800,0,115,1395,2165,0,1094,2686,3456],
+[42850,0,107,1384,2155,0,1086,2675,3446],
+[42900,0,99,1374,2144,0,1078,2665,3435],
+[42950,0,91,1363,2134,0,1070,2654,3425],
+[43000,0,83,1353,2123,0,1062,2644,3414],
+[43050,0,75,1342,2113,0,1054,2633,3404],
+[43100,0,67,1332,2102,0,1046,2623,3393],
+[43150,0,59,1321,2092,0,1038,2612,3383],
+[43200,0,51,1311,2081,0,1030,2602,3372],
+[43250,0,43,1300,2071,0,1022,2591,3362],
+[43300,0,35,1290,2060,0,1014,2581,3351],
+[43350,0,27,1279,2050,0,1006,2570,3341],
+[43400,0,19,1269,2039,0,998,2560,3330],
+[43450,0,11,1258,2029,0,990,2549,3320],
+[43492,0,3,1248,2018,0,982,2539,3309],
+[43500,0,0,1248,2018,0,982,2539,3309],
+[43550,0,0,1237,2008,0,974,2528,3298],
+[43600,0,0,1226,1997,0,966,2517,3288],
+[43650,0,0,1216,1986,0,958,2507,3277],
+[43700,0,0,1205,1976,0,950,2496,3267],
+[43750,0,0,1195,1965,0,942,2486,3256],
+[43800,0,0,1184,1955,0,934,2475,3246],
+[43850,0,0,1174,1944,0,926,2465,3235],
+[43900,0,0,1163,1934,0,918,2454,3225],
+[43950,0,0,1153,1923,0,910,2444,3214],
+[44000,0,0,1142,1913,0,902,2433,3204],
+[44050,0,0,1132,1902,0,894,2423,3193],
+[44100,0,0,1121,1892,0,886,2412,3183],
+[44150,0,0,1111,1881,0,878,2402,3172],
+[44200,0,0,1100,1871,0,870,2391,3162],
+[44250,0,0,1090,1860,0,862,2381,3151],
+[44300,0,0,1079,1850,0,854,2370,3141],
+[44350,0,0,1069,1839,0,846,2360,3130],
+[44400,0,0,1058,1829,0,838,2349,3119],
+[44450,0,0,1047,1818,0,830,2338,3109],
+[44500,0,0,1037,1807,0,822,2328,3098],
+[44550,0,0,1026,1797,0,814,2317,3088],
+[44600,0,0,1016,1786,0,806,2307,3077],
+[44650,0,0,1005,1776,0,798,2296,3067],
+[44700,0,0,995,1765,0,790,2286,3056],
+[44750,0,0,984,1755,0,782,2275,3046],
+[44800,0,0,974,1744,0,775,2265,3035],
+[44850,0,0,963,1734,0,767,2254,3025],
+[44900,0,0,953,1723,0,759,2244,3014],
+[44950,0,0,942,1713,0,751,2233,3004],
+[45000,0,0,932,1702,0,743,2223,2993],
+[45050,0,0,921,1692,0,735,2212,2983],
+[45100,0,0,911,1681,0,727,2202,2972],
+[45150,0,0,900,1671,0,719,2191,2962],
+[45200,0,0,890,1660,0,711,2181,2951],
+[45250,0,0,879,1649,0,703,2170,2940],
+[45300,0,0,868,1639,0,695,2159,2930],
+[45350,0,0,858,1628,0,687,2149,2919],
+[45400,0,0,847,1618,0,679,2138,2909],
+[45450,0,0,837,1607,0,671,2128,2898],
+[45500,0,0,826,1597,0,663,2117,2888],
+[45550,0,0,816,1586,0,655,2107,2877],
+[45600,0,0,805,1576,0,647,2096,2867],
+[45650,0,0,795,1565,0,639,2086,2856],
+[45700,0,0,784,1555,0,631,2075,2846],
+[45750,0,0,774,1544,0,623,2065,2835],
+[45800,0,0,763,1534,0,615,2054,2825],
+[45850,0,0,753,1523,0,607,2044,2814],
+[45900,0,0,742,1513,0,599,2033,2804],
+[45950,0,0,732,1502,0,591,2023,2793],
+[46000,0,0,721,1492,0,583,2012,2783],
+[46050,0,0,711,1481,0,575,2001,2772],
+[46100,0,0,700,1470,0,567,1991,2761],
+[46150,0,0,689,1460,0,559,1980,2751],
+[46200,0,0,679,1449,0,551,1970,2740],
+[46250,0,0,668,1439,0,543,1959,2730],
+[46300,0,0,658,1428,0,535,1949,2719],
+[46350,0,0,647,1418,0,527,1938,2709],
+[46400,0,0,637,1407,0,519,1928,2698],
+[46450,0,0,626,1397,0,511,1917,2688],
+[46500,0,0,616,1386,0,503,1907,2677],
+[46550,0,0,605,1376,0,495,1896,2667],
+[46600,0,0,595,1365,0,487,1886,2656],
+[46650,0,0,584,1355,0,479,1875,2646],
+[46700,0,0,574,1344,0,471,1865,2635],
+[46750,0,0,563,1334,0,463,1854,2625],
+[46800,0,0,553,1323,0,455,1844,2614],
+[46850,0,0,542,1313,0,447,1833,2604],
+[46900,0,0,532,1302,0,439,1822,2593],
+[46950,0,0,521,1291,0,431,1812,2582],
+[47000,0,0,510,1281,0,423,1801,2572],
+[47050,0,0,500,1270,0,415,1791,2561],
+[47100,0,0,489,1260,0,407,1780,2551],
+[47150,0,0,479,1249,0,399,1770,2540],
+[47200,0,0,468,1239,0,391,1759,2530],
+[47250,0,0,458,1228,0,383,1749,2519],
+[47300,0,0,447,1218,0,375,1738,2509],
+[47350,0,0,437,1207,0,367,1728,2498],
+[47400,0,0,426,1197,0,359,1717,2488],
+[47450,0,0,416,1186,0,351,1707,2477],
+[47500,0,0,405,1176,0,343,1696,2467],
+[47550,0,0,395,1165,0,335,1686,2456],
+[47600,0,0,384,1155,0,327,1675,2446],
+[47650,0,0,374,1144,0,319,1665,2435],
+[47700,0,0,363,1134,0,311,1654,2425],
+[47750,0,0,352,1123,0,303,1643,2414],
+[47800,0,0,342,1112,0,295,1633,2403],
+[47850,0,0,331,1102,0,287,1622,2393],
+[47900,0,0,321,1091,0,279,1612,2382],
+[47950,0,0,310,1081,0,271,1601,2372],
+[48000,0,0,300,1070,0,263,1591,2361],
+[48050,0,0,289,1060,0,255,1580,2351],
+[48100,0,0,279,1049,0,247,1570,2340],
+[48150,0,0,268,1039,0,239,1559,2330],
+[48200,0,0,258,1028,0,231,1549,2319],
+[48250,0,0,247,1018,0,223,1538,2309],
+[48300,0,0,237,1007,0,215,1528,2298],
+[48350,0,0,226,997,0,207,1517,2288],
+[48400,0,0,216,986,0,199,1507,2277],
+[48450,0,0,205,976,0,191,1496,2267],
+[48500,0,0,195,965,0,183,1486,2256],
+[48550,0,0,184,955,0,175,1475,2245],
+[48600,0,0,173,944,0,167,1464,2235],
+[48650,0,0,163,933,0,159,1454,2224],
+[48700,0,0,152,923,0,151,1443,2214],
+[48750,0,0,142,912,0,143,1433,2203],
+[48800,0,0,131,902,0,135,1422,2193],
+[48850,0,0,121,891,0,127,1412,2182],
+[48900,0,0,110,881,0,119,1401,2172],
+[48950,0,0,100,870,0,111,1391,2161],
+[49000,0,0,89,860,0,103,1380,2151],
+[49050,0,0,79,849,0,95,1370,2140],
+[49100,0,0,68,839,0,87,1359,2130],
+[49150,0,0,58,828,0,79,1349,2119],
+[49200,0,0,47,818,0,71,1338,2109],
+[49250,0,0,37,807,0,63,1328,2098],
+[49300,0,0,26,797,0,55,1317,2088],
+[49350,0,0,16,786,0,47,1307,2077],
+[49399,0,0,5,776,0,39,1296,2066],
+[49400,0,0,0,776,0,39,1296,2066],
+[49450,0,0,0,765,0,31,1285,2056],
+[49500,0,0,0,754,0,23,1275,2045],
+[49550,0,0,0,744,0,15,1264,2035],
+[49600,0,0,0,733,0,7,1254,2024],
+[49622,0,0,0,723,0,2,1243,2014],
+[49650,0,0,0,723,0,0,1243,2014],
+[49700,0,0,0,712,0,0,1233,2003],
+[49750,0,0,0,702,0,0,1222,1993],
+[49800,0,0,0,691,0,0,1212,1982],
+[49850,0,0,0,681,0,0,1201,1972],
+[49900,0,0,0,670,0,0,1191,1961],
+[49950,0,0,0,660,0,0,1180,1951],
+[50000,0,0,0,649,0,0,1170,1940],
+[50050,0,0,0,639,0,0,1159,1930],
+[50100,0,0,0,628,0,0,1149,1919],
+[50150,0,0,0,618,0,0,1138,1909],
+[50200,0,0,0,607,0,0,1128,1898],
+[50250,0,0,0,596,0,0,1117,1887],
+[50300,0,0,0,586,0,0,1106,1877],
+[50350,0,0,0,575,0,0,1096,1866],
+[50400,0,0,0,565,0,0,1085,1856],
+[50450,0,0,0,554,0,0,1075,1845],
+[50500,0,0,0,544,0,0,1064,1835],
+[50550,0,0,0,533,0,0,1054,1824],
+[50600,0,0,0,523,0,0,1043,1814],
+[50650,0,0,0,512,0,0,1033,1803],
+[50700,0,0,0,502,0,0,1022,1793],
+[50750,0,0,0,491,0,0,1012,1782],
+[50800,0,0,0,481,0,0,1001,1772],
+[50850,0,0,0,470,0,0,991,1761],
+[50900,0,0,0,460,0,0,980,1751],
+[50950,0,0,0,449,0,0,970,1740],
+[51000,0,0,0,439,0,0,959,1730],
+[51050,0,0,0,428,0,0,948,1719],
+[51100,0,0,0,417,0,0,938,1708],
+[51150,0,0,0,407,0,0,927,1698],
+[51200,0,0,0,396,0,0,917,1687],
+[51250,0,0,0,386,0,0,906,1677],
+[51300,0,0,0,375,0,0,896,1666],
+[51350,0,0,0,365,0,0,885,1656],
+[51400,0,0,0,354,0,0,875,1645],
+[51450,0,0,0,344,0,0,864,1635],
+[51500,0,0,0,333,0,0,854,1624],
+[51550,0,0,0,323,0,0,843,1614],
+[51600,0,0,0,312,0,0,833,1603],
+[51650,0,0,0,302,0,0,822,1593],
+[51700,0,0,0,291,0,0,812,1582],
+[51750,0,0,0,281,0,0,801,1572],
+[51800,0,0,0,270,0,0,791,1561],
+[51850,0,0,0,260,0,0,780,1551],
+[51900,0,0,0,249,0,0,769,1540],
+[51950,0,0,0,238,0,0,759,1529],
+[52000,0,0,0,228,0,0,748,1519],
+[52050,0,0,0,217,0,0,738,1508],
+[52100,0,0,0,207,0,0,727,1498],
+[52150,0,0,0,196,0,0,717,1487],
+[52200,0,0,0,186,0,0,706,1477],
+[52250,0,0,0,175,0,0,696,1466],
+[52300,0,0,0,165,0,0,685,1456],
+[52350,0,0,0,154,0,0,675,1445],
+[52400,0,0,0,144,0,0,664,1435],
+[52450,0,0,0,133,0,0,654,1424],
+[52500,0,0,0,123,0,0,643,1414],
+[52550,0,0,0,112,0,0,633,1403],
+[52600,0,0,0,102,0,0,622,1393],
+[52650,0,0,0,91,0,0,612,1382],
+[52700,0,0,0,81,0,0,601,1372],
+[52750,0,0,0,70,0,0,590,1361],
+[52800,0,0,0,59,0,0,580,1350],
+[52850,0,0,0,49,0,0,569,1340],
+[52900,0,0,0,38,0,0,559,1329],
+[52950,0,0,0,28,0,0,548,1319],
+[53000,0,0,0,17,0,0,538,1308],
+[53050,0,0,0,7,0,0,527,1298],
+[53057,0,0,0,1,0,0,517,1287],
+[53100,0,0,0,0,0,0,517,1287],
+[53150,0,0,0,0,0,0,506,1277],
+[53200,0,0,0,0,0,0,496,1266],
+[53250,0,0,0,0,0,0,485,1256],
+[53300,0,0,0,0,0,0,475,1245],
+[53350,0,0,0,0,0,0,464,1235],
+[53400,0,0,0,0,0,0,454,1224],
+[53450,0,0,0,0,0,0,443,1214],
+[53500,0,0,0,0,0,0,433,1203],
+[53550,0,0,0,0,0,0,422,1192],
+[53600,0,0,0,0,0,0,411,1182],
+[53650,0,0,0,0,0,0,401,1171],
+[53700,0,0,0,0,0,0,390,1161],
+[53750,0,0,0,0,0,0,380,1150],
+[53800,0,0,0,0,0,0,369,1140],
+[53850,0,0,0,0,0,0,359,1129],
+[53900,0,0,0,0,0,0,348,1119],
+[53950,0,0,0,0,0,0,338,1108],
+[54000,0,0,0,0,0,0,327,1098],
+[54050,0,0,0,0,0,0,317,1087],
+[54100,0,0,0,0,0,0,306,1077],
+[54150,0,0,0,0,0,0,296,1066],
+[54200,0,0,0,0,0,0,285,1056],
+[54250,0,0,0,0,0,0,275,1045],
+[54300,0,0,0,0,0,0,264,1035],
+[54350,0,0,0,0,0,0,254,1024],
+[54400,0,0,0,0,0,0,243,1013],
+[54450,0,0,0,0,0,0,232,1003],
+[54500,0,0,0,0,0,0,222,992],
+[54550,0,0,0,0,0,0,211,982],
+[54600,0,0,0,0,0,0,201,971],
+[54650,0,0,0,0,0,0,190,961],
+[54700,0,0,0,0,0,0,180,950],
+[54750,0,0,0,0,0,0,169,940],
+[54800,0,0,0,0,0,0,159,929],
+[54850,0,0,0,0,0,0,148,919],
+[54900,0,0,0,0,0,0,138,908],
+[54950,0,0,0,0,0,0,127,898],
+[55000,0,0,0,0,0,0,117,887],
+[55050,0,0,0,0,0,0,106,877],
+[55100,0,0,0,0,0,0,96,866],
+[55150,0,0,0,0,0,0,85,856],
+[55200,0,0,0,0,0,0,75,845],
+[55250,0,0,0,0,0,0,64,834],
+[55300,0,0,0,0,0,0,53,824],
+[55350,0,0,0,0,0,0,43,813],
+[55400,0,0,0,0,0,0,32,803],
+[55450,0,0,0,0,0,0,22,792],
+[55500,0,0,0,0,0,0,11,782],
+[55529,0,0,0,0,0,0,3,771],
+[55550,0,0,0,0,0,0,0,771],
+[55600,0,0,0,0,0,0,0,761],
+[55650,0,0,0,0,0,0,0,750],
+[55700,0,0,0,0,0,0,0,740],
+[55750,0,0,0,0,0,0,0,729],
+[55800,0,0,0,0,0,0,0,719],
+[55850,0,0,0,0,0,0,0,708],
+[55900,0,0,0,0,0,0,0,698],
+[55950,0,0,0,0,0,0,0,687],
+[56000,0,0,0,0,0,0,0,677],
+[56050,0,0,0,0,0,0,0,666],
+[56100,0,0,0,0,0,0,0,655],
+[56150,0,0,0,0,0,0,0,645],
+[56200,0,0,0,0,0,0,0,634],
+[56250,0,0,0,0,0,0,0,624],
+[56300,0,0,0,0,0,0,0,613],
+[56350,0,0,0,0,0,0,0,603],
+[56400,0,0,0,0,0,0,0,592],
+[56450,0,0,0,0,0,0,0,582],
+[56500,0,0,0,0,0,0,0,571],
+[56550,0,0,0,0,0,0,0,561],
+[56600,0,0,0,0,0,0,0,550],
+[56650,0,0,0,0,0,0,0,540],
+[56700,0,0,0,0,0,0,0,529],
+[56750,0,0,0,0,0,0,0,519],
+[56800,0,0,0,0,0,0,0,508],
+[56850,0,0,0,0,0,0,0,498],
+[56900,0,0,0,0,0,0,0,487],
+[56950,0,0,0,0,0,0,0,476],
+[57000,0,0,0,0,0,0,0,466],
+[57050,0,0,0,0,0,0,0,455],
+[57100,0,0,0,0,0,0,0,445],
+[57150,0,0,0,0,0,0,0,434],
+[57200,0,0,0,0,0,0,0,424],
+[57250,0,0,0,0,0,0,0,413],
+[57300,0,0,0,0,0,0,0,403],
+[57350,0,0,0,0,0,0,0,392],
+[57400,0,0,0,0,0,0,0,382],
+[57450,0,0,0,0,0,0,0,371],
+[57500,0,0,0,0,0,0,0,361],
+[57550,0,0,0,0,0,0,0,350],
+[57600,0,0,0,0,0,0,0,340],
+[57650,0,0,0,0,0,0,0,329],
+[57700,0,0,0,0,0,0,0,319],
+[57750,0,0,0,0,0,0,0,308],
+[57800,0,0,0,0,0,0,0,297],
+[57850,0,0,0,0,0,0,0,287],
+[57900,0,0,0,0,0,0,0,276],
+[57950,0,0,0,0,0,0,0,266],
+[58000,0,0,0,0,0,0,0,255],
+[58050,0,0,0,0,0,0,0,245],
+[58100,0,0,0,0,0,0,0,234],
+[58150,0,0,0,0,0,0,0,224],
+[58200,0,0,0,0,0,0,0,213],
+[58250,0,0,0,0,0,0,0,203],
+[58300,0,0,0,0,0,0,0,192],
+[58350,0,0,0,0,0,0,0,182],
+[58400,0,0,0,0,0,0,0,171],
+[58450,0,0,0,0,0,0,0,161],
+[58500,0,0,0,0,0,0,0,150],
+[58550,0,0,0,0,0,0,0,139],
+[58600,0,0,0,0,0,0,0,129],
+[58650,0,0,0,0,0,0,0,118],
+[58700,0,0,0,0,0,0,0,108],
+[58750,0,0,0,0,0,0,0,97],
+[58800,0,0,0,0,0,0,0,87],
+[58850,0,0,0,0,0,0,0,76],
+[58900,0,0,0,0,0,0,0,66],
+[58950,0,0,0,0,0,0,0,55],
+[59000,0,0,0,0,0,0,0,45],
+[59050,0,0,0,0,0,0,0,34],
+[59100,0,0,0,0,0,0,0,24],
+[59150,0,0,0,0,0,0,0,13],
+[59187,0,0,0,0,0,0,0,0]
+]
+
+    </script>
+  </body>
+</html>
