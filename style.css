@@ -1,0 +1,77 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #00539F;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.styled-table thead, tr {
+  background-color: #f5ec6c;
+  color: black;
+  text-align: left;
+  border: 1px solid black;
+}
+.styled-table table, th, td {    
+    border: 1px solid black;
+    border-radius: 3px;
+} 
+
+.commentfield2,
+.commentfield3 {
+  width: 15px;
+}
+.commentfield4 {
+  width: 75px;
+}
+.commentfield0 {
+  width: 40px;
+}
+.commentfield1 {
+  width: 250px;
+}
+.commentfield5 {
+  width: 150px;
+}
+.commentfield6,
+.commentfield7 {
+  width: 100px;
+}
+.commentfield7 {
+  background-color: #31e240;
+}
