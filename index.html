@@ -1468,7 +1468,7 @@ console.log("diff",diff)
         function figure_oh_tax(income) { //TY2023
           //console.log("income",income)
           if (income <= 26050) { return 0 }
-          else if (income <= 100000) {return (360.69 + 0.02765*(income-26050))}
+          else if (income <= 100000) {return (360.69 + 0.0275*(income-26050))}
           else if (income <= 115300) {return (2394.32 + 0.03688*(income-100000))}
           else {return (2958.58 + 0.0375*(income-115300))}
         }
