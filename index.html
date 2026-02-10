@@ -64,6 +64,7 @@
 6: Tool assumes that Auto Loan interest complies with all OB3 requirements 
 7: Federal MAGI in schedule 1-A is same as federal AGI
 8: You must use TaxSlayer (or equivalent tool) to accurately determine taxes.
+9: QBI Deduction is not being adjusted for self-employed tip income deduction.
         
         Please report any bugs to tim@ttimtucker.com`)
       }
@@ -2294,14 +2295,17 @@ console.log("diff",diff)
       }
       function calculate_federal_taxable_income() {
         document.getElementById("TaxpayerFedIncome").innerHTML=Math.max(0,Math.round(parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML) 
+		 - parseInt(document.getElementById("TaxpayerS1A").innerHTML)
          - parseInt(document.getElementById("TaxpayerQBI").innerHTML)
          - parseInt(document.getElementById("TaxpayerSD").innerHTML)));
         document.getElementById("SpouseFedIncome").innerHTML=Math.max(0,Math.round(parseInt(document.getElementById("SpouseFederalAGI").innerHTML) 
-         - parseInt(document.getElementById("SpouseQBI").innerHTML)
+         - parseInt(document.getElementById("SpouseS1A").innerHTML)
+		 - parseInt(document.getElementById("SpouseQBI").innerHTML)
          - parseInt(document.getElementById("SpouseSD").innerHTML)));
          
          document.getElementById("JointFedIncome").innerHTML=Math.max(0,Math.round(parseInt(document.getElementById("JointFederalAGI").innerHTML) 
-         - parseInt(document.getElementById("JointQBI").innerHTML)
+         - parseInt(document.getElementById("JointS1A").innerHTML)
+		 - parseInt(document.getElementById("JointQBI").innerHTML)
          - parseInt(document.getElementById("JointSD").innerHTML)));
          JointFederalAGI=parseInt(document.getElementById("JointFederalAGI").innerHTML)
          JointQBI=parseInt(document.getElementById("JointQBI").innerHTML)
