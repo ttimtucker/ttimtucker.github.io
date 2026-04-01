@@ -2355,7 +2355,9 @@ console.log("diff",diff)
 		if (AgeSpouse>64) {
           var QualSeniorDeductionJoint=QualSeniorDeductionJoint + 6000;
 		}
-		
+		var SeniorDeductionReduction = 0.06*Math.max(0,(fAGI - 150000));
+		var QualSeniorDeductionJoint = QualSeniorDeductionJoint - SeniorDeductionReduction;
+		console.log("SeniorDeductionReduction",fAGI,SeniorDeductionReduction, QualSeniorDeductionJoint);
 		document.getElementById("TaxpayerS1A").innerHTML=QualAutoInterestTaxpayer;
 		document.getElementById("SpouseS1A").innerHTML=QualAutoInterestSpouse;
 		document.getElementById("JointS1A").innerHTML=QualTips + QualOT + QualAutoInterestJoint + QualSeniorDeductionJoint;
