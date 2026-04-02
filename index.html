@@ -1165,20 +1165,25 @@
         var line13 = 180000
         var line14 = JointAGI
         var line15 = line13 - line14
+		console.log("JointFederalTax",JointFederalTax);
         if (line15 <= 0) {
           var line18 = 0
-          var line19 = education_credit_limit_worksheet(line18, line9, JointFederalTax)
+          //var line19 = education_credit_limit_worksheet(line18, line9, JointFederalTax)
           document.getElementById("JointNRCEducation").innerHTML = Math.round(line19)
         } else {
           var line16 = 20000
           if (line15 >= line16) {
             var line17 = 1
-            var line18 = line12*line17
+          } else {
+            var line17 = line15/line16;
           }
-          var line19 = education_credit_limit_worksheet(line18, line9, JointFederalTax)
-          document.getElementById("JointNRCEducation").innerHTML = Math.round(line19)
-        }
-        //console.log("ed_credit",line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18,line19)
+		  var line18 = line12*line17
+		  console.log("before line 19 calc",line18, line9, JointFederalTax);
+		}
+		var line19 = education_credit_limit_worksheet(line18, line9, JointFederalTax)
+	    document.getElementById("JointNRCEducation").innerHTML = Math.round(line19)
+  
+        console.log("ed_credit",line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18,line19);
 
       }
       function education_credit_limit_worksheet(line18, line9, tax) {
@@ -1794,6 +1799,8 @@ console.log("diff",diff)
         var JointForeignTax=parseInt(document.getElementById("JointForeignTax").innerHTML);
         var JointNRCEducation=parseInt(document.getElementById("JointNRCEducation").innerHTML);
         document.getElementById("JointNRC").innerHTML=Joint_CTC_COD+Joint_CDC+JointRSC+JointForeignTax+JointNRCEducation;
+		console.log("JointNRC",document.getElementById("JointNRC").innerHTML);
+		console.log(Joint_CTC_COD,Joint_CDC,JointRSC,JointForeignTax,JointNRCEducation);
       }
       function calculate_ctc() {
         var Taxpayer_AGI = parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML);
