@@ -2320,12 +2320,39 @@ console.log("diff",diff)
          //console.log("calculate_federal_taxable_income",JointFederalAGI,JointQBI,JointSD)
       }
       function calculate_qbi() {
-        document.getElementById("TaxpayerQBI").innerHTML=Math.round(0.2*(parseInt(document.getElementById("TaxpayerSelfEmployment").value) 
+        before_limit_TaxpayerQBI=Math.round(0.2*(parseInt(document.getElementById("TaxpayerSelfEmployment").value) 
          - parseInt(document.getElementById("TaxpayerDeductibleSEtax").innerHTML)));
-        document.getElementById("SpouseQBI").innerHTML=Math.round(0.2*(parseInt(document.getElementById("SpouseSelfEmployment").value) 
+		
+		TaxpayerQualDiv=parseInt(document.getElementById("TaxpayerQualDiv").value);
+        TaxpayerCapGain=parseInt(document.getElementById("TaxpayerCapGain").innerHTML);
+		TaxpayerAGI=parseInt(document.getElementById("TaxpayerFederalAGI").innerHTML);
+		TaxpayerS1A=parseInt(document.getElementById("TaxpayerS1A").innerHTML);
+		TaxpayerSD=document.getElementById("TaxpayerSD").innerHTML;
+		TaxpayerIncomeLimiter=Math.max(0,TaxpayerAGI-TaxpayerQualDiv-TaxpayerCapGain-TaxpayerS1A-TaxpayerSD);
+		
+		after_limit_TaxpayerQBI=Math.round(0.2*TaxpayerIncomeLimiter);
+		console.log("after_limit_TaxpayerQBI",after_limit_TaxpayerQBI)
+		TaxpayerQBI=Math.min(after_limit_TaxpayerQBI,before_limit_TaxpayerQBI);
+		document.getElementById("TaxpayerQBI").innerHTML=TaxpayerQBI;
+		
+		before_limit_SpouseQBI=Math.round(0.2*(parseInt(document.getElementById("SpouseSelfEmployment").value) 
          - parseInt(document.getElementById("SpouseDeductibleSEtax").innerHTML)));
-         document.getElementById("JointQBI").innerHTML=Math.round(0.2*(parseInt(document.getElementById("JointSelfEmployment").innerHTML) 
-         - parseInt(document.getElementById("JointDeductibleSEtax").innerHTML)));
+		
+		SpouseQualDiv=parseInt(document.getElementById("SpouseQualDiv").value);
+        SpouseCapGain=parseInt(document.getElementById("SpouseCapGain").innerHTML);
+		SpouseAGI=parseInt(document.getElementById("SpouseFederalAGI").innerHTML);
+		SpouseS1A=parseInt(document.getElementById("SpouseS1A").innerHTML);
+		SpouseSD=document.getElementById("SpouseSD").innerHTML;
+		SpouseIncomeLimiter=Math.max(0,SpouseAGI-SpouseQualDiv-SpouseCapGain-SpouseS1A-SpouseSD);
+		
+		after_limit_SpouseQBI=Math.round(0.2*SpouseIncomeLimiter);
+		console.log("after_limit_SpouseQBI",after_limit_SpouseQBI)
+		SpouseQBI=Math.min(after_limit_SpouseQBI,before_limit_SpouseQBI);
+		document.getElementById("SpouseQBI").innerHTML=SpouseQBI;
+		
+		document.getElementById("JointQBI").innerHTML=TaxpayerQBI+SpouseQBI;
+		
+
          //console.log(parseInt(document.getElementById("TaxpayerSelfEmployment").value));
       }
 	  
